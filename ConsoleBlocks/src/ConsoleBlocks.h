@@ -10,6 +10,10 @@ class ConsoleBlocks : public QMainWindow
 public:
 	ConsoleBlocks(QWidget *parent = Q_NULLPTR);
 
+
+private slots:
+	void on_pushButton_clicked();
+
 private:
 	Ui::ConsoleBlocksClass ui;
 };
