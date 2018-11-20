@@ -11,10 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,9 +25,12 @@ QT_BEGIN_NAMESPACE
 class Ui_ConsoleBlocksClass
 {
 public:
+    QWidget *centralWidget;
+    QListWidget *listWidget;
+    QPushButton *pushButton;
+    QToolButton *toolButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
-    QWidget *centralWidget;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *ConsoleBlocksClass)
@@ -32,15 +38,25 @@ public:
         if (ConsoleBlocksClass->objectName().isEmpty())
             ConsoleBlocksClass->setObjectName(QStringLiteral("ConsoleBlocksClass"));
         ConsoleBlocksClass->resize(600, 400);
+        centralWidget = new QWidget(ConsoleBlocksClass);
+        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        listWidget = new QListWidget(centralWidget);
+        listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setGeometry(QRect(0, 0, 256, 341));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(90, 90, 75, 23));
+        toolButton = new QToolButton(centralWidget);
+        toolButton->setObjectName(QStringLiteral("toolButton"));
+        toolButton->setGeometry(QRect(80, 240, 23, 20));
+        ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 600, 22));
         ConsoleBlocksClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ConsoleBlocksClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        ConsoleBlocksClass->addToolBar(mainToolBar);
-        centralWidget = new QWidget(ConsoleBlocksClass);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        ConsoleBlocksClass->setCentralWidget(centralWidget);
+        ConsoleBlocksClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(ConsoleBlocksClass);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         ConsoleBlocksClass->setStatusBar(statusBar);
@@ -53,6 +69,8 @@ public:
     void retranslateUi(QMainWindow *ConsoleBlocksClass)
     {
         ConsoleBlocksClass->setWindowTitle(QApplication::translate("ConsoleBlocksClass", "ConsoleBlocks", nullptr));
+        pushButton->setText(QApplication::translate("ConsoleBlocksClass", "PushButton", nullptr));
+        toolButton->setText(QApplication::translate("ConsoleBlocksClass", "...", nullptr));
     } // retranslateUi
 
 };
