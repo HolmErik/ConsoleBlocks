@@ -1,9 +1,0 @@
-﻿  Moc'ing ConsoleBlocks.h...
-  Rcc'ing ConsoleBlocks.qrc...
-  Uic'ing ConsoleBlocks.ui...
-  RCC: Warning: No resources in 'C:\dev\ConsoleBlocks\ConsoleBlocks\ConsoleBlocks\ConsoleBlocks.qrc'.
-  ConsoleBlocks.cpp
-  main.cpp
-  moc_ConsoleBlocks.cpp
-  qrc_ConsoleBlocks.cpp
-  ConsoleBlocks.vcxproj -> C:\dev\ConsoleBlocks\ConsoleBlocks\x64\Debug\ConsoleBlocks.exe
