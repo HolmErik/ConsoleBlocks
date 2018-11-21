@@ -33,7 +33,8 @@
     <IntDir>$(SolutionDir)bin-int\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
     <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
@@ -54,7 +55,7 @@
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -70,7 +71,7 @@
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;%(PreprocessorDefinitions)</Define>
     </QtMoc>
     <QtUic>
@@ -82,16 +83,16 @@
       <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
     </QtRcc>
     <PostBuildEvent>
-      <Command>xcopy "$(QTDIR)\bin\Qt5Cored.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
-xcopy "$(QTDIR)\bin\Qt5Widgetsd.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
-xcopy "$(QTDIR)\bin\Qt5Guid.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"</Command>
+      <Command>xcopy /Y "$(QTDIR)\bin\Qt5Cored.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
+xcopy /Y "$(QTDIR)\bin\Qt5Widgetsd.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
+xcopy /Y "$(QTDIR)\bin\Qt5Guid.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -106,7 +107,7 @@ xcopy "$(QTDIR)\bin\Qt5Guid.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</Define>
     </QtMoc>
     <QtUic>
@@ -117,6 +118,11 @@ xcopy "$(QTDIR)\bin\Qt5Guid.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
       <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
     </QtRcc>
+    <PostBuildEvent>
+      <Command>xcopy "$(QTDIR)\bin\Qt5Core.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
+xcopy "$(QTDIR)\bin\Qt5Widgets.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
+xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Widgets\BlockBase\CBBaseBlock.cpp" />
