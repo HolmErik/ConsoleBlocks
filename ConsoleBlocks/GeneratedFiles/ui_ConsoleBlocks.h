@@ -19,6 +19,7 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
+#include "BaseWidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -29,6 +30,7 @@ public:
     QListWidget *listWidget;
     QPushButton *pushButton;
     QToolButton *toolButton;
+    BaseWidget *widget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -42,13 +44,16 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         listWidget = new QListWidget(centralWidget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(0, 0, 256, 341));
+        listWidget->setGeometry(QRect(0, 0, 221, 341));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(90, 90, 75, 23));
         toolButton = new QToolButton(centralWidget);
         toolButton->setObjectName(QStringLiteral("toolButton"));
         toolButton->setGeometry(QRect(80, 240, 23, 20));
+        widget = new BaseWidget(centralWidget);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(300, 150, 120, 80));
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
