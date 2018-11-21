@@ -11,7 +11,7 @@ class CBBaseBlock : public QWidget
 public:
 	CBBaseBlock(QWidget *parent = Q_NULLPTR);
 	~CBBaseBlock();
-
 private:
 	Ui::CBBaseBlock ui;
 };
+ 

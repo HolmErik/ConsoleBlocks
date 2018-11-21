@@ -8,6 +8,10 @@ CBBaseBlock::CBBaseBlock(QWidget *parent) : QWidget(parent)
 	frame = this->findChild<QFrame*>(tr("frame"));
 	frame->setStyleSheet("background-color: red");
 	
+	QFrame *box;
+	box = this->findChild<QFrame*>(tr("box"));
+	box->setStyleSheet("background-color: blue");
+
 }
 
 CBBaseBlock::~CBBaseBlock()
