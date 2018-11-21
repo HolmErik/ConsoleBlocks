@@ -81,6 +81,11 @@
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
       <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
     </QtRcc>
+    <PostBuildEvent>
+      <Command>xcopy "$(QTDIR)\bin\Qt5Cored.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
+xcopy "$(QTDIR)\bin\Qt5Widgetsd.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
+xcopy "$(QTDIR)\bin\Qt5Guid.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
