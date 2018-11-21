@@ -36,7 +36,7 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Widgets\BaseWidget\BaseWidget.cpp">
+    <ClCompile Include="src\Widgets\BlockBase\CBBaseBlock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,7 +44,7 @@
     <QtUic Include="ConsoleBlocks.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="src\Widgets\BaseWidget\BaseWidget.ui">
+    <QtUic Include="src\Widgets\BlockBase\CBBaseBlock.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -57,7 +57,7 @@
     <QtMoc Include="src\ConsoleBlocks.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="src\Widgets\BaseWidget\BaseWidget.h">
+    <QtMoc Include="src\Widgets\BlockBase\CBBaseBlock.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

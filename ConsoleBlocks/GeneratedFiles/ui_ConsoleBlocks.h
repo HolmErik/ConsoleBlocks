@@ -14,12 +14,11 @@
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QToolButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include "BaseWidget.h"
+#include "BlockBase/CBBaseBlock.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -28,9 +27,9 @@ class Ui_ConsoleBlocksClass
 public:
     QWidget *centralWidget;
     QListWidget *listWidget;
-    QPushButton *pushButton;
-    QToolButton *toolButton;
-    BaseWidget *widget;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    CBBaseBlock *widget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -45,15 +44,19 @@ public:
         listWidget = new QListWidget(centralWidget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
         listWidget->setGeometry(QRect(0, 0, 221, 341));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(90, 90, 75, 23));
-        toolButton = new QToolButton(centralWidget);
-        toolButton->setObjectName(QStringLiteral("toolButton"));
-        toolButton->setGeometry(QRect(80, 240, 23, 20));
-        widget = new BaseWidget(centralWidget);
+        verticalLayoutWidget = new QWidget(centralWidget);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(-1, -1, 221, 341));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        widget = new CBBaseBlock(verticalLayoutWidget);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(300, 150, 120, 80));
+
+        verticalLayout->addWidget(widget);
+
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -74,8 +77,6 @@ public:
     void retranslateUi(QMainWindow *ConsoleBlocksClass)
     {
         ConsoleBlocksClass->setWindowTitle(QApplication::translate("ConsoleBlocksClass", "ConsoleBlocks", nullptr));
-        pushButton->setText(QApplication::translate("ConsoleBlocksClass", "PushButton", nullptr));
-        toolButton->setText(QApplication::translate("ConsoleBlocksClass", "...", nullptr));
     } // retranslateUi
 
 };
