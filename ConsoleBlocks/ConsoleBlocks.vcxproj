@@ -55,11 +55,12 @@
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;$(ProjectDir)vendor/include;$(ProjectDir)src/Widgets/consoleWidget;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -71,7 +72,7 @@
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;$(ProjectDir)vendor/include;$(ProjectDir)src/Widgets/consoleWidget;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;%(PreprocessorDefinitions)</Define>
     </QtMoc>
     <QtUic>
@@ -92,10 +93,11 @@ xcopy /Y "$(QTDIR)\bin\Qt5Guid.dll" "$(SolutionDir)bin\$(Platform)\$(Configurati
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;$(ProjectDir)vendor/include;$(ProjectDir)src/Widgets/consoleWidget;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -107,7 +109,7 @@ xcopy /Y "$(QTDIR)\bin\Qt5Guid.dll" "$(SolutionDir)bin\$(Platform)\$(Configurati
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(ProjectDir)src/Widgets;$(ProjectDir)src/Widgets/BlockBase;$(ProjectDir)src/Widgets/Blocks;$(ProjectDir)vendor/include;$(ProjectDir)src/Widgets/consoleWidget;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</Define>
     </QtMoc>
     <QtUic>
@@ -125,6 +127,7 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Widgets\consoleWidget\ConsoleWidget.cpp" />
     <ClCompile Include="src\Widgets\BlockBase\CBBaseBlock.cpp" />
     <ClCompile Include="src\ConsoleBlocks.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -133,6 +136,7 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     <QtMoc Include="src\ConsoleBlocks.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="src\Widgets\consoleWidget\ConsoleWidget.ui" />
     <QtUic Include="src\Widgets\BlockBase\CBBaseBlock.ui" />
     <QtUic Include="ConsoleBlocks.ui" />
   </ItemGroup>
@@ -144,6 +148,20 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\scripts\script.chai" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\scripts\output.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\Widgets\consoleWidget\ConsoleWidget.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
     </QtMoc>
   </ItemGroup>

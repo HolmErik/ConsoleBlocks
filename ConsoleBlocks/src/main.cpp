@@ -1,10 +1,17 @@
 #include "ConsoleBlocks.h"
 #include <QtWidgets/QApplication>
 
+
+
+
 int main(int argc, char *argv[])
 {
-	QApplication a(argc, argv);
-	ConsoleBlocks w;
-	w.show();
-	return a.exec();
+	QApplication* a = new QApplication(argc, argv);
+	ConsoleBlocks* w = new ConsoleBlocks();
+	w->show();
+	a->exec();
+	
+	delete(w);
+	delete(a);
+	return 0;
 }

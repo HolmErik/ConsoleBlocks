@@ -22,6 +22,7 @@
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "CBBaseBlock.h"
+#include "ConsoleWidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -29,7 +30,9 @@ class Ui_ConsoleBlocksClass
 {
 public:
     QWidget *centralWidget;
-    QHBoxLayout *horizontalLayout;
+    QVBoxLayout *verticalLayout_3;
+    QWidget *WorkSpace;
+    QHBoxLayout *horizontalLayout_2;
     QWidget *BlockShelf_Parent;
     QVBoxLayout *verticalLayout_2;
     QFrame *BlockShelf_Layout;
@@ -46,6 +49,7 @@ public:
     QPushButton *pushButton;
     QFrame *Canvas;
     CBBaseBlock *widget_7;
+    ConsoleWidget *Console;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -61,11 +65,18 @@ public:
         ConsoleBlocksClass->setFont(font);
         centralWidget = new QWidget(ConsoleBlocksClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        horizontalLayout = new QHBoxLayout(centralWidget);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        BlockShelf_Parent = new QWidget(centralWidget);
+        verticalLayout_3 = new QVBoxLayout(centralWidget);
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        WorkSpace = new QWidget(centralWidget);
+        WorkSpace->setObjectName(QStringLiteral("WorkSpace"));
+        horizontalLayout_2 = new QHBoxLayout(WorkSpace);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        BlockShelf_Parent = new QWidget(WorkSpace);
         BlockShelf_Parent->setObjectName(QStringLiteral("BlockShelf_Parent"));
         BlockShelf_Parent->setMaximumSize(QSize(200, 16777215));
         BlockShelf_Parent->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
@@ -134,7 +145,7 @@ public:
         verticalLayout->addWidget(widget);
 
 
-        verticalLayout_2->addWidget(BlockShelf_Layout, 0, Qt::AlignTop);
+        verticalLayout_2->addWidget(BlockShelf_Layout);
 
         widget_8 = new QWidget(BlockShelf_Parent);
         widget_8->setObjectName(QStringLiteral("widget_8"));
@@ -153,9 +164,9 @@ public:
         verticalLayout_2->addWidget(widget_8);
 
 
-        horizontalLayout->addWidget(BlockShelf_Parent);
+        horizontalLayout_2->addWidget(BlockShelf_Parent);
 
-        Canvas = new QFrame(centralWidget);
+        Canvas = new QFrame(WorkSpace);
         Canvas->setObjectName(QStringLiteral("Canvas"));
         Canvas->setStyleSheet(QStringLiteral("background-color: rgb(0, 255, 255);"));
         Canvas->setFrameShape(QFrame::StyledPanel);
@@ -165,7 +176,16 @@ public:
         widget_7->setObjectName(QStringLiteral("widget_7"));
         widget_7->setGeometry(QRect(100, 60, 441, 61));
 
-        horizontalLayout->addWidget(Canvas);
+        horizontalLayout_2->addWidget(Canvas);
+
+
+        verticalLayout_3->addWidget(WorkSpace);
+
+        Console = new ConsoleWidget(centralWidget);
+        Console->setObjectName(QStringLiteral("Console"));
+        Console->setMaximumSize(QSize(16777215, 200));
+
+        verticalLayout_3->addWidget(Console);
 
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);

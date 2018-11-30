@@ -2,6 +2,7 @@
 
 
 #include <QtWidgets/QMainWindow>
+#include <fstream>
 #include "../ui_ConsoleBlocks.h"
 
 class ConsoleBlocks : public QMainWindow
@@ -10,11 +11,13 @@ class ConsoleBlocks : public QMainWindow
 
 public:
 	ConsoleBlocks(QWidget *parent = Q_NULLPTR);
-
+	ConsoleWidget* console;
 
 private slots:
 	void on_pushButton_clicked();
+	
 
 private:
 	Ui::ConsoleBlocksClass ui;
+
 };
