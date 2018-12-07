@@ -26,7 +26,7 @@ public:
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QHBoxLayout *horizontalLayout;
-    QLabel *console;
+    QLabel *CL;
 
     void setupUi(QWidget *ConsoleWidget)
     {
@@ -49,11 +49,11 @@ public:
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        console = new QLabel(scrollAreaWidgetContents);
-        console->setObjectName(QStringLiteral("console"));
-        console->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        CL = new QLabel(scrollAreaWidgetContents);
+        CL->setObjectName(QStringLiteral("CL"));
+        CL->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
-        horizontalLayout->addWidget(console);
+        horizontalLayout->addWidget(CL);
 
         scrollArea->setWidget(scrollAreaWidgetContents);
 
@@ -68,7 +68,7 @@ public:
     void retranslateUi(QWidget *ConsoleWidget)
     {
         ConsoleWidget->setWindowTitle(QApplication::translate("ConsoleWidget", "ConsoleWidget", nullptr));
-        console->setText(QString());
+        CL->setText(QString());
     } // retranslateUi
 
 };

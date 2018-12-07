@@ -2,7 +2,6 @@
 
 
 #include <QtWidgets/QMainWindow>
-#include <fstream>
 #include "../ui_ConsoleBlocks.h"
 
 class ConsoleBlocks : public QMainWindow

@@ -51,7 +51,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="console">
+        <widget class="QLabel" name="CL">
          <property name="text">
           <string/>
          </property>

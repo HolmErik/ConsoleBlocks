@@ -2,6 +2,7 @@
 
 #include <QtWidgets/qwidget.h>
 #include <QtWidgets/qframe.h>
+#include <fstream>
 #include "ui_ConsoleWidget.h"
 
 class ConsoleWidget : public QWidget
@@ -11,8 +12,11 @@ class ConsoleWidget : public QWidget
 public:
 	ConsoleWidget(QWidget *parent = Q_NULLPTR);
 	~ConsoleWidget();
-	
-	QLabel* label;
+	void print(std::string outPut);
+	void printFile(const std::string filePath);
+	void clearConsole();
 private:
+	QLabel* label;
+	std::string consoleText;
 	Ui::ConsoleWidget ui;
 };
