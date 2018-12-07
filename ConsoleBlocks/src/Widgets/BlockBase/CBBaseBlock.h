@@ -4,6 +4,7 @@
 #include <QtWidgets/qframe.h>
 #include "ui_CBBaseBlock.h"
 
+
 class CBBaseBlock : public QWidget
 {
 	Q_OBJECT
@@ -13,5 +14,7 @@ public:
 	~CBBaseBlock();
 private:
 	Ui::CBBaseBlock ui;
+	void mousePressEvent(QMouseEvent*);
+	void mouseReleaseEvent(QMouseEvent*);
 };
  
