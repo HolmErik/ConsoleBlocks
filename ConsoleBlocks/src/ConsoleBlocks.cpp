@@ -5,6 +5,8 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 {
 	ui.setupUi(this);
 	console = findChild<ConsoleWidget*>("CW");
+	canvas = findChild<Canvas*>("canvas");
+	canvas->setConsole(console);
 
 	
 }

@@ -5,6 +5,7 @@ ConsoleWidget::ConsoleWidget(QWidget *parent)
 {
 	ui.setupUi(this);
 	label = findChild<QLabel*>("CL");
+
 	print("Console:");
 }
 

@@ -4,9 +4,11 @@ Canvas::Canvas(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-	console = QWidget::window()->findChild<ConsoleWidget*>("console");
-//	console->clearConsole();
-//	console->print("Hora");
+}
+void Canvas::setConsole(ConsoleWidget* c)
+{
+	console = c;
+	console->print("Hittat console");
 }
 
 Canvas::~Canvas()

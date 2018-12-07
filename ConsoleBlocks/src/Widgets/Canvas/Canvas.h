@@ -14,6 +14,7 @@ public:
 	Canvas(QWidget *parent = Q_NULLPTR);
 	~Canvas();
 	std::vector<CBBaseBlock*> GetBlocks();
+	void setConsole(ConsoleWidget* c);
 
 private:
 	Ui::Canvas ui;

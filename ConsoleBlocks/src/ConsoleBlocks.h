@@ -11,7 +11,7 @@ class ConsoleBlocks : public QMainWindow
 public:
 	ConsoleBlocks(QWidget *parent = Q_NULLPTR);
 	ConsoleWidget* console;
-
+	Canvas* canvas;
 private slots:
 	void on_pushButton_clicked();
 	
