@@ -1,8 +1,0 @@
-﻿  Moc'ing src\BaseWidget.h...
-  Moc'ing src\BaseWidgetPlugin.h...
-  BaseWidget.cpp
-  BaseWidgetPlugin.cpp
-  moc_BaseWidget.cpp
-  moc_BaseWidgetPlugin.cpp
-     Creating library C:\Dev\repos\consoleblocks\x64\Debug\BaseWidget.lib and object C:\Dev\repos\consoleblocks\x64\Debug\BaseWidget.exp
-  BaseWidget.vcxproj -> C:\Dev\repos\consoleblocks\x64\Debug\BaseWidget.dll

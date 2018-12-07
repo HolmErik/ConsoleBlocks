@@ -189,8 +189,8 @@
          <widget class="CBBaseBlock" name="widget_7" native="true">
           <property name="geometry">
            <rect>
-            <x>100</x>
-            <y>60</y>
+            <x>30</x>
+            <y>170</y>
             <width>441</width>
             <height>61</height>
            </rect>
@@ -219,7 +219,7 @@
      <x>0</x>
      <y>0</y>
      <width>899</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

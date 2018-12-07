@@ -13,7 +13,8 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -21,32 +22,42 @@ QT_BEGIN_NAMESPACE
 class Ui_ConsoleWidget
 {
 public:
+    QVBoxLayout *verticalLayout;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
     QHBoxLayout *horizontalLayout;
     QLabel *console;
-    QScrollBar *verticalScrollBar;
 
     void setupUi(QWidget *ConsoleWidget)
     {
         if (ConsoleWidget->objectName().isEmpty())
             ConsoleWidget->setObjectName(QStringLiteral("ConsoleWidget"));
-        ConsoleWidget->resize(454, 200);
+        ConsoleWidget->resize(555, 200);
         ConsoleWidget->setMaximumSize(QSize(16777215, 200));
-        horizontalLayout = new QHBoxLayout(ConsoleWidget);
-        horizontalLayout->setSpacing(0);
+        verticalLayout = new QVBoxLayout(ConsoleWidget);
+        verticalLayout->setSpacing(0);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        scrollArea = new QScrollArea(ConsoleWidget);
+        scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 553, 198));
+        horizontalLayout = new QHBoxLayout(scrollAreaWidgetContents);
+        horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        console = new QLabel(ConsoleWidget);
+        console = new QLabel(scrollAreaWidgetContents);
         console->setObjectName(QStringLiteral("console"));
         console->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         horizontalLayout->addWidget(console);
 
-        verticalScrollBar = new QScrollBar(ConsoleWidget);
-        verticalScrollBar->setObjectName(QStringLiteral("verticalScrollBar"));
-        verticalScrollBar->setOrientation(Qt::Vertical);
+        scrollArea->setWidget(scrollAreaWidgetContents);
 
-        horizontalLayout->addWidget(verticalScrollBar);
+        verticalLayout->addWidget(scrollArea);
 
 
         retranslateUi(ConsoleWidget);
@@ -57,7 +68,7 @@ public:
     void retranslateUi(QWidget *ConsoleWidget)
     {
         ConsoleWidget->setWindowTitle(QApplication::translate("ConsoleWidget", "ConsoleWidget", nullptr));
-        console->setText(QApplication::translate("ConsoleWidget", "TextLabel", nullptr));
+        console->setText(QString());
     } // retranslateUi
 
 };

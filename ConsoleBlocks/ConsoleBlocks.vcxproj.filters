@@ -71,9 +71,9 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\scripts\script.chai" />
+    <Text Include="src\scripts\output.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\scripts\output.txt" />
+    <None Include="src\scripts\script.chai" />
   </ItemGroup>
 </Project>

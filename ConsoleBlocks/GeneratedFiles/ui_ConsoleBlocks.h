@@ -174,7 +174,7 @@ public:
         Canvas->setLineWidth(1);
         widget_7 = new CBBaseBlock(Canvas);
         widget_7->setObjectName(QStringLiteral("widget_7"));
-        widget_7->setGeometry(QRect(100, 60, 441, 61));
+        widget_7->setGeometry(QRect(30, 170, 441, 61));
 
         horizontalLayout_2->addWidget(Canvas);
 
@@ -190,7 +190,7 @@ public:
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 899, 21));
+        menuBar->setGeometry(QRect(0, 0, 899, 22));
         ConsoleBlocksClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ConsoleBlocksClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
