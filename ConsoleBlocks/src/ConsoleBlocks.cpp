@@ -15,6 +15,6 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 //FOR JOHAN FUTURE REFERENCE
 void ConsoleBlocks::on_pushButton_clicked()
 {
-	console->print("Hej");
+	console->printFile("src/scripts/output.txt");
 	setWindowTitle(tr("WE DID IT REDDIT"));
 }

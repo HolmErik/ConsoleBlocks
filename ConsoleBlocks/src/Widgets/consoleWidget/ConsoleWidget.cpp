@@ -22,16 +22,15 @@ void ConsoleWidget::print(std::string outPut)
 
 void ConsoleWidget::printFile(const std::string filePath)
 {
-
+	std::string textRow;
 	std::fstream file;
-	file.open("src/scripts/output.txt");
+	file.open(filePath);
 	if (file.is_open())
 	{
-		label->setText("");
-		while (std::getline(file, consoleText))
+		while (std::getline(file, textRow))
 		{
 
-			label->setText(label->text() + "\n" + QString::fromStdString(consoleText));
+			print(textRow);
 		}
 		file.close();
 	}
