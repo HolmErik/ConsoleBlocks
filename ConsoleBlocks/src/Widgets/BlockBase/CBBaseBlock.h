@@ -16,5 +16,9 @@ private:
 	Ui::CBBaseBlock ui;
 	void mousePressEvent(QMouseEvent*);
 	void mouseReleaseEvent(QMouseEvent*);
+
+	CBBaseBlock *previousBlock;
+	CBBaseBlock *nextBlock;
+	std::string code;
 };
  
