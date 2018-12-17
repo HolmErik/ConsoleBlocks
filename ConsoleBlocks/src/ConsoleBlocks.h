@@ -2,7 +2,9 @@
 
 
 #include <QtWidgets/QMainWindow>
+#include <chaiscript/chaiscript.hpp>
 #include "../ui_ConsoleBlocks.h"
+#include "Translator.h"
 
 class ConsoleBlocks : public QMainWindow
 {
@@ -18,5 +20,6 @@ private slots:
 
 private:
 	Ui::ConsoleBlocksClass ui;
+	Translator translator;
 
 };

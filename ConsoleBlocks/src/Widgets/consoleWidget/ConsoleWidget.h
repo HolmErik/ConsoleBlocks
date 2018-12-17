@@ -12,11 +12,13 @@ class ConsoleWidget : public QWidget
 public:
 	ConsoleWidget(QWidget *parent = Q_NULLPTR);
 	~ConsoleWidget();
-	void print(std::string outPut);
-	void printFile(const std::string filePath);
-	void clearConsole();
+	static void print(std::string outPut);
+	static void print(const int outPut);
+	static void print(const float outPut);
+	static void printFile(const std::string filePath);
+	static void clearConsole();
 private:
-	QLabel* label;
-	std::string consoleText;
+	static QLabel* label;
+	static std::string consoleText;
 	Ui::ConsoleWidget ui;
 };

@@ -129,11 +129,13 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ScriptFunctions.cpp" />
     <ClCompile Include="src\Widgets\Canvas\Canvas.cpp" />
     <ClCompile Include="src\Widgets\ConsoleWidget\ConsoleWidget.cpp" />
     <ClCompile Include="src\Widgets\BlockBase\CBBaseBlock.cpp" />
     <ClCompile Include="src\ConsoleBlocks.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Translator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\ConsoleBlocks.h" />
@@ -156,9 +158,6 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\scripts\script.chai" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="src\scripts\output.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +175,10 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
     </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ScriptFunctions.h" />
+    <ClInclude Include="src\Translator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

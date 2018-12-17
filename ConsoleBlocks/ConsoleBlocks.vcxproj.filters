@@ -45,6 +45,12 @@
     <ClCompile Include="src\Widgets\Canvas\Canvas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Translator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ScriptFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ConsoleBlocks.ui">
@@ -83,6 +89,11 @@
     <Text Include="src\scripts\output.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\scripts\script.chai" />
+    <ClInclude Include="src\Translator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ScriptFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
