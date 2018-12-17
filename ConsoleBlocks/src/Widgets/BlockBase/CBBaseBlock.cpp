@@ -23,11 +23,14 @@ void CBBaseBlock::mousePressEvent(QMouseEvent *e)
 
 void CBBaseBlock::mouseReleaseEvent(QMouseEvent *e)
 {
+	//depending on what block this function will look different
 	if (QWidget::window()->childAt(e->windowPos().x(), e->windowPos().y())->underMouse())//if widget under mouse is under mouse??
 	{
-		this->ui.label->setText("asdasdasd");
-		this->ui.label->setText(QString::number(e->windowPos().x()));
-		CBBaseBlock *n = new CBBaseBlock(this);
-		this->layout()->addWidget(n);
+		if (this->parentWidget()->objectName() == tr("BlockShelf_Layout"))
+		{
+			CBBaseBlock *n = new CBBaseBlock(this);
+			this->layout()->addWidget(n);
+			n->setParent(this->parentWidget());
+		}
 	}
 }
