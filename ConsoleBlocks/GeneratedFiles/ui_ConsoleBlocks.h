@@ -50,7 +50,8 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton;
     Canvas *canvas;
-    CBStartBlock *widget_7;
+    QVBoxLayout *verticalLayout_4;
+    CBStartBlock *StartBlock;
     ConsoleWidget *CW;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -171,9 +172,16 @@ public:
         canvas = new Canvas(WorkSpace);
         canvas->setObjectName(QStringLiteral("canvas"));
         canvas->setStyleSheet(QStringLiteral(""));
-        widget_7 = new CBStartBlock(canvas);
-        widget_7->setObjectName(QStringLiteral("widget_7"));
-        widget_7->setGeometry(QRect(30, 170, 441, 61));
+        verticalLayout_4 = new QVBoxLayout(canvas);
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setSizeConstraint(QLayout::SetNoConstraint);
+        StartBlock = new CBStartBlock(canvas);
+        StartBlock->setObjectName(QStringLiteral("StartBlock"));
+
+        verticalLayout_4->addWidget(StartBlock);
+
 
         horizontalLayout_2->addWidget(canvas);
 
@@ -189,7 +197,7 @@ public:
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 899, 21));
+        menuBar->setGeometry(QRect(0, 0, 899, 22));
         ConsoleBlocksClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ConsoleBlocksClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

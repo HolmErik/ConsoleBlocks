@@ -11,6 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QWidget>
 #include "CBBaseBlock.h"
 
 QT_BEGIN_NAMESPACE
@@ -18,12 +21,42 @@ QT_BEGIN_NAMESPACE
 class Ui_CBStartBlock
 {
 public:
+    QHBoxLayout *horizontalLayout;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label;
 
     void setupUi(CBBaseBlock *CBStartBlock)
     {
         if (CBStartBlock->objectName().isEmpty())
             CBStartBlock->setObjectName(QStringLiteral("CBStartBlock"));
-        CBStartBlock->resize(376, 90);
+        CBStartBlock->resize(400, 32);
+        CBStartBlock->setMinimumSize(QSize(400, 32));
+        CBStartBlock->setMaximumSize(QSize(400, 32));
+        CBStartBlock->setStyleSheet(QStringLiteral(""));
+        horizontalLayout = new QHBoxLayout(CBStartBlock);
+        horizontalLayout->setSpacing(2);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(2, 2, 2, 2);
+        widget = new QWidget(CBStartBlock);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 98);"));
+        horizontalLayout_2 = new QHBoxLayout(widget);
+        horizontalLayout_2->setSpacing(0);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setTextFormat(Qt::AutoText);
+        label->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_2->addWidget(label);
+
+
+        horizontalLayout->addWidget(widget);
+
 
         retranslateUi(CBStartBlock);
 
@@ -33,6 +66,7 @@ public:
     void retranslateUi(CBBaseBlock *CBStartBlock)
     {
         CBStartBlock->setWindowTitle(QApplication::translate("CBStartBlock", "CBStartBlock", nullptr));
+        label->setText(QApplication::translate("CBStartBlock", "START H\303\204R BROR", nullptr));
     } // retranslateUi
 
 };
