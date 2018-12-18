@@ -180,6 +180,9 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     <ClInclude Include="src\ScriptFunctions.h" />
     <ClInclude Include="src\Translator.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\TranslatedCode.chai" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
