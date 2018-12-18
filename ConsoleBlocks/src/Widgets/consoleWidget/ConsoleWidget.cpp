@@ -19,23 +19,23 @@ ConsoleWidget::~ConsoleWidget()
 }
 
 
-void ConsoleWidget::print(const std::string outPut)
+void ConsoleWidget::print(const std::string &outPut)
 {
 	consoleText += outPut + "\n";
 	label->setText(QString::fromStdString(consoleText));
 }
-void ConsoleWidget::print(const int outPut)
+void ConsoleWidget::print(const int &outPut)
 {
 	consoleText += std::to_string(outPut) + "\n";
 	label->setText(QString::fromStdString(consoleText));
 }
-void ConsoleWidget::print(const float outPut)
+void ConsoleWidget::print(const float &outPut)
 {
 	consoleText += std::to_string(outPut) + "\n";
 	label->setText(QString::fromStdString(consoleText));
 }
 
-void ConsoleWidget::printFile(const std::string filePath)
+void ConsoleWidget::printFile(const std::string &filePath)
 {
 	std::string textRow;
 	std::ifstream file;

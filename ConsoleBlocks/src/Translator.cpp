@@ -4,7 +4,7 @@
 
 Translator::Translator()
 {
-	fileName = "TranslatedCode.chai";
+	fileName = "src/TranslatedCode.chai";
 	file.open(fileName);
 }
 

@@ -12,10 +12,10 @@ class ConsoleWidget : public QWidget
 public:
 	ConsoleWidget(QWidget *parent = Q_NULLPTR);
 	~ConsoleWidget();
-	static void print(std::string outPut);
-	static void print(const int outPut);
-	static void print(const float outPut);
-	static void printFile(const std::string filePath);
+	static void print(const std::string &outPut);
+	static void print(const int &outPut);
+	static void print(const float &outPut);
+	static void printFile(const std::string &filePath);
 	static void clearConsole();
 private:
 	static QLabel* label;

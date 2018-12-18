@@ -5,6 +5,7 @@
 #include <chaiscript/chaiscript.hpp>
 #include "../ui_ConsoleBlocks.h"
 #include "Translator.h"
+#include "ScriptFunctions.h"
 
 class ConsoleBlocks : public QMainWindow
 {
@@ -21,5 +22,6 @@ private slots:
 private:
 	Ui::ConsoleBlocksClass ui;
 	Translator translator;
+	chaiscript::ChaiScript* scriptExecuter;
 
 };

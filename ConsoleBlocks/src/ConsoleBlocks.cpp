@@ -5,12 +5,9 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 {
 
 	////JOHAN DEBUG
-	//translator.OutPut(R"(puts("Hello World");)");
+	translator.OutPut(R"(CBPrint("Hello World");)");
 
 
-	//chaiscript::ChaiScript chai;
-	////chai.add(chaiscript::fun(&post), "post");
-	//chai.eval_file(translator.GetScript());
 
 	////JOHAN DEBUG
 
@@ -18,9 +15,10 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 	console = findChild<ConsoleWidget*>("CW");
 	canvas = findChild<Canvas*>("canvas");
 	canvas->setConsole(console);
-	ConsoleWidget::print("HOOOOORA");
-
 	
+	scriptExecuter = new chaiscript::ChaiScript();
+	ScriptFunctions::AddFunctions(scriptExecuter);
+	scriptExecuter->eval_file(translator.GetScript());
 }
 
 void ConsoleBlocks::on_pushButton_clicked()
