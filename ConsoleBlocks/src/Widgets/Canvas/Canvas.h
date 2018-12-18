@@ -16,7 +16,15 @@ public:
 	~Canvas();
 	CBBaseBlock *startBlock;
 
+	template<class T>
+	static void CreateBlock()
+	{
+		T *n = new T(me);
+		me->layout()->addWidget(n);
+	}
+
 
 private:
+	static QWidget* me;
 	Ui::Canvas ui;
 };

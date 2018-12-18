@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -20,7 +19,6 @@ QT_BEGIN_NAMESPACE
 class Ui_Canvas
 {
 public:
-    QHBoxLayout *horizontalLayout;
     QFrame *frame;
 
     void setupUi(QWidget *Canvas)
@@ -28,19 +26,17 @@ public:
         if (Canvas->objectName().isEmpty())
             Canvas->setObjectName(QStringLiteral("Canvas"));
         Canvas->resize(400, 300);
-        horizontalLayout = new QHBoxLayout(Canvas);
-        horizontalLayout->setSpacing(3);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         frame = new QFrame(Canvas);
         frame->setObjectName(QStringLiteral("frame"));
+        frame->setGeometry(QRect(0, 0, 400, 300));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy);
         frame->setStyleSheet(QStringLiteral("background-color: rgb(0, 255, 255);"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-
-        horizontalLayout->addWidget(frame);
-
 
         retranslateUi(Canvas);
 

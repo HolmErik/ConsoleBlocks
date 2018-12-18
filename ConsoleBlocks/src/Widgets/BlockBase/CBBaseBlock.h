@@ -3,6 +3,7 @@
 #include <QtWidgets/qwidget.h>
 #include <QtWidgets/qframe.h>
 #include "ui_CBBaseBlock.h"
+#include "Qt3DInput/qmouseevent.h"
 //#include <Canvas/Canvas.h>
 
 
@@ -18,13 +19,25 @@ public:
 
 private:
 	Ui::CBBaseBlock ui;
-	virtual void mousePressEvent(QMouseEvent*);
-	virtual void mouseReleaseEvent(QMouseEvent*);
+	//virtual void mousePressEvent(QMouseEvent*);
+	//virtual void mouseReleaseEvent(QMouseEvent*);
 
 
 	CBBaseBlock *previousBlock;
 	CBBaseBlock *nextBlock;
 	std::string code;
+
+
+public:
+	CBBaseBlock* GetPreviousBlock()
+	{
+		return previousBlock;
+	}
+
+	CBBaseBlock* GetNextBlock()
+	{
+		return nextBlock;
+	}
 
 };
  
