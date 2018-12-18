@@ -51,6 +51,9 @@
     <ClCompile Include="src\ScriptFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Widgets\BlockBase\CBStartBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ConsoleBlocks.ui">
@@ -63,6 +66,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="src\Widgets\Canvas\Canvas.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\Widgets\BlockBase\CBStartBlock.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -82,6 +88,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="src\Widgets\Canvas\Canvas.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\Widgets\BlockBase\CBStartBlock.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

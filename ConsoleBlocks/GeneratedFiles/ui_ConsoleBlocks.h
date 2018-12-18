@@ -24,6 +24,7 @@
 #include "CBBaseBlock.h"
 #include "Canvas.h"
 #include "ConsoleWidget.h"
+#include "cbstartblock.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -49,7 +50,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton;
     Canvas *canvas;
-    CBBaseBlock *widget_7;
+    CBStartBlock *widget_7;
     ConsoleWidget *CW;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -170,7 +171,7 @@ public:
         canvas = new Canvas(WorkSpace);
         canvas->setObjectName(QStringLiteral("canvas"));
         canvas->setStyleSheet(QStringLiteral(""));
-        widget_7 = new CBBaseBlock(canvas);
+        widget_7 = new CBStartBlock(canvas);
         widget_7->setObjectName(QStringLiteral("widget_7"));
         widget_7->setGeometry(QRect(30, 170, 441, 61));
 
@@ -188,7 +189,7 @@ public:
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 899, 22));
+        menuBar->setGeometry(QRect(0, 0, 899, 21));
         ConsoleBlocksClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ConsoleBlocksClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

@@ -14,13 +14,3 @@ void Canvas::setConsole(ConsoleWidget* c)
 Canvas::~Canvas()
 {
 }
-
-std::vector<CBBaseBlock*> Canvas::GetBlocks()
-{
-	return std::vector<CBBaseBlock*>();
-}
-
-void Canvas::blocks()
-{
-	
-}

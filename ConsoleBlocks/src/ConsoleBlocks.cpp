@@ -24,5 +24,4 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 void ConsoleBlocks::on_pushButton_clicked()
 {
 	console->printFile("src/scripts/output.txt");
-	setWindowTitle(tr("WE DID IT REDDIT"));
 }

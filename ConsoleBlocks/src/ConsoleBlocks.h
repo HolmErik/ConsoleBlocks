@@ -6,6 +6,7 @@
 #include "../ui_ConsoleBlocks.h"
 #include "Translator.h"
 #include "ScriptFunctions.h"
+#include "CBStartBlock.h"
 
 class ConsoleBlocks : public QMainWindow
 {

@@ -177,7 +177,7 @@
          <property name="styleSheet">
           <string notr="true"/>
          </property>
-         <widget class="CBBaseBlock" name="widget_7" native="true">
+         <widget class="CBStartBlock" name="widget_7" native="true">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -210,7 +210,7 @@
      <x>0</x>
      <y>0</y>
      <width>899</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -242,6 +242,12 @@
    <class>Canvas</class>
    <extends>QWidget</extends>
    <header>Canvas.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CBStartBlock</class>
+   <extends>QWidget</extends>
+   <header>cbstartblock.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

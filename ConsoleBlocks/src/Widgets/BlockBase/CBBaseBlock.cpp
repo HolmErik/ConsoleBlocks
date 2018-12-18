@@ -1,6 +1,9 @@
 #include "CBBaseBlock.h"
 #include "Qt3DInput/qmouseevent.h"
 
+
+//Canvas* CBBaseBlock::canvas = nullptr;
+
 CBBaseBlock::CBBaseBlock(QWidget *parent) : QWidget(parent)
 {
 	ui.setupUi(this);
@@ -30,7 +33,7 @@ void CBBaseBlock::mouseReleaseEvent(QMouseEvent *e)
 		{
 			CBBaseBlock *n = new CBBaseBlock(this);
 			this->layout()->addWidget(n);
-			n->setParent(this->parentWidget());
+			//n->setParent(CBBaseBlock::canvas);
 		}
 	}
 }
