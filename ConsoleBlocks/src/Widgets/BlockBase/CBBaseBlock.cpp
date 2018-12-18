@@ -31,8 +31,8 @@ void CBBaseBlock::mouseReleaseEvent(QMouseEvent *e)
 	{
 		if (this->parentWidget()->objectName() == tr("BlockShelf_Layout"))
 		{
-			CBBaseBlock *n = new CBBaseBlock(this);
-			this->layout()->addWidget(n);
+			//CBBaseBlock *n = new CBBaseBlock(this);
+			//this->layout()->addWidget(n);
 			//n->setParent(CBBaseBlock::canvas);
 		}
 	}

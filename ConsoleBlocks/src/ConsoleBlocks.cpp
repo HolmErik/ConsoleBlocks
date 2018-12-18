@@ -4,17 +4,13 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 	: QMainWindow(parent)
 {
 
-	////JOHAN DEBUG
+
 	translator.OutPut(R"(CBPrint("Hello World");)");
 
 
-
-	////JOHAN DEBUG
-
 	ui.setupUi(this);
-	console = findChild<ConsoleWidget*>("CW");
 	canvas = findChild<Canvas*>("canvas");
-	canvas->setConsole(console);
+	canvas->startBlock = findChild<CBStartBlock*>("StartBlock");
 	
 	scriptExecuter = new chaiscript::ChaiScript();
 	ScriptFunctions::AddFunctions(scriptExecuter);

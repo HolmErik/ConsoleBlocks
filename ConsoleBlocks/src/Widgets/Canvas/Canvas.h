@@ -5,6 +5,7 @@
 #include <vector>
 #include "../ui_Canvas.h"
 #include <BlockBase/CBBaseBlock.h>
+#include <BlockBase/CBStartBlock.h>
 
 class Canvas : public QWidget
 {
@@ -13,9 +14,9 @@ class Canvas : public QWidget
 public:
 	Canvas(QWidget *parent = Q_NULLPTR);
 	~Canvas();
-	void setConsole(ConsoleWidget* c);
+	CBBaseBlock *startBlock;
+
 
 private:
 	Ui::Canvas ui;
-	ConsoleWidget* console;
 };

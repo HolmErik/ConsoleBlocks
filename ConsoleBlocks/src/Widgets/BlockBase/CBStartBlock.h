@@ -11,6 +11,7 @@ public:
 	CBStartBlock(QWidget *parent = Q_NULLPTR);
 	~CBStartBlock();
 
+
 private:
 	Ui::CBStartBlock ui;
 };

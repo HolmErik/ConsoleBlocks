@@ -3,7 +3,7 @@
 #include <QtWidgets/qwidget.h>
 #include <QtWidgets/qframe.h>
 #include "ui_CBBaseBlock.h"
-#include <Canvas/Canvas.h>
+//#include <Canvas/Canvas.h>
 
 
 class CBBaseBlock : public QWidget
