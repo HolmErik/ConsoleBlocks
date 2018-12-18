@@ -118,22 +118,22 @@
               </widget>
              </item>
              <item>
-              <widget class="CBBaseBlock" name="widget_6" native="true"/>
+              <widget class="IfBlock_Shelf" name="widget_6" native="true"/>
              </item>
              <item>
-              <widget class="CBBaseBlock" name="widget_5" native="true"/>
+              <widget class="IfBlock_Shelf" name="widget_5" native="true"/>
              </item>
              <item>
-              <widget class="CBBaseBlock" name="widget_4" native="true"/>
+              <widget class="IfBlock_Shelf" name="widget_4" native="true"/>
              </item>
              <item>
-              <widget class="CBBaseBlock" name="widget_3" native="true"/>
+              <widget class="IfBlock_Shelf" name="widget_3" native="true"/>
              </item>
              <item>
-              <widget class="CBBaseBlock" name="widget_2" native="true"/>
+              <widget class="IfBlock_Shelf" name="widget_2" native="true"/>
              </item>
              <item>
-              <widget class="CBBaseBlock" name="widget" native="true"/>
+              <widget class="IfBlock_Shelf" name="widget" native="true"/>
              </item>
             </layout>
            </widget>
@@ -225,12 +225,6 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>CBBaseBlock</class>
-   <extends>QWidget</extends>
-   <header>CBBaseBlock.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>ConsoleWidget</class>
    <extends>QWidget</extends>
    <header>ConsoleWidget.h</header>
@@ -246,6 +240,12 @@
    <class>CBStartBlock</class>
    <extends>QWidget</extends>
    <header>cbstartblock.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>IfBlock_Shelf</class>
+   <extends>QWidget</extends>
+   <header>ifblock_shelf.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -21,10 +21,10 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include "CBBaseBlock.h"
 #include "Canvas.h"
 #include "ConsoleWidget.h"
 #include "cbstartblock.h"
+#include "ifblock_shelf.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -40,12 +40,12 @@ public:
     QFrame *BlockShelf_Layout;
     QVBoxLayout *verticalLayout;
     QLabel *label;
-    CBBaseBlock *widget_6;
-    CBBaseBlock *widget_5;
-    CBBaseBlock *widget_4;
-    CBBaseBlock *widget_3;
-    CBBaseBlock *widget_2;
-    CBBaseBlock *widget;
+    IfBlock_Shelf *widget_6;
+    IfBlock_Shelf *widget_5;
+    IfBlock_Shelf *widget_4;
+    IfBlock_Shelf *widget_3;
+    IfBlock_Shelf *widget_2;
+    IfBlock_Shelf *widget;
     QWidget *widget_8;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton;
@@ -117,32 +117,32 @@ public:
 
         verticalLayout->addWidget(label);
 
-        widget_6 = new CBBaseBlock(BlockShelf_Layout);
+        widget_6 = new IfBlock_Shelf(BlockShelf_Layout);
         widget_6->setObjectName(QStringLiteral("widget_6"));
 
         verticalLayout->addWidget(widget_6);
 
-        widget_5 = new CBBaseBlock(BlockShelf_Layout);
+        widget_5 = new IfBlock_Shelf(BlockShelf_Layout);
         widget_5->setObjectName(QStringLiteral("widget_5"));
 
         verticalLayout->addWidget(widget_5);
 
-        widget_4 = new CBBaseBlock(BlockShelf_Layout);
+        widget_4 = new IfBlock_Shelf(BlockShelf_Layout);
         widget_4->setObjectName(QStringLiteral("widget_4"));
 
         verticalLayout->addWidget(widget_4);
 
-        widget_3 = new CBBaseBlock(BlockShelf_Layout);
+        widget_3 = new IfBlock_Shelf(BlockShelf_Layout);
         widget_3->setObjectName(QStringLiteral("widget_3"));
 
         verticalLayout->addWidget(widget_3);
 
-        widget_2 = new CBBaseBlock(BlockShelf_Layout);
+        widget_2 = new IfBlock_Shelf(BlockShelf_Layout);
         widget_2->setObjectName(QStringLiteral("widget_2"));
 
         verticalLayout->addWidget(widget_2);
 
-        widget = new CBBaseBlock(BlockShelf_Layout);
+        widget = new IfBlock_Shelf(BlockShelf_Layout);
         widget->setObjectName(QStringLiteral("widget"));
 
         verticalLayout->addWidget(widget);
