@@ -14,17 +14,24 @@ class Canvas : public QWidget
 public:
 	Canvas(QWidget *parent = Q_NULLPTR);
 	~Canvas();
-	CBBaseBlock *startBlock;
+	static CBBaseBlock *startBlock;
 
 	template<class T>
 	static void CreateBlock()
 	{
 		T *n = new T(me);
 		me->layout()->addWidget(n);
+		FindLastBlock()->SetNextBlock(n);
 	}
 
 
 private:
 	static QWidget* me;
 	Ui::Canvas ui;
+
+
+	static CBBaseBlock* FindLastBlock();
+
+
+
 };

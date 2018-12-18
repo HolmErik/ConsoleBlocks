@@ -10,7 +10,7 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 
 	ui.setupUi(this);
 	canvas = findChild<Canvas*>("canvas");
-	canvas->startBlock = findChild<CBStartBlock*>("StartBlock");
+	Canvas::startBlock = findChild<CBStartBlock*>("StartBlock");
 
 	
 	scriptExecuter = new chaiscript::ChaiScript();

@@ -23,21 +23,16 @@ private:
 	//virtual void mouseReleaseEvent(QMouseEvent*);
 
 
-	CBBaseBlock *previousBlock;
-	CBBaseBlock *nextBlock;
-	std::string code;
+	CBBaseBlock *previousBlock = nullptr;
+	CBBaseBlock *nextBlock = nullptr;
+	std::string code = "";
 
 
 public:
-	CBBaseBlock* GetPreviousBlock()
-	{
-		return previousBlock;
-	}
-
-	CBBaseBlock* GetNextBlock()
-	{
-		return nextBlock;
-	}
+	CBBaseBlock * GetPreviousBlock();
+	CBBaseBlock* GetNextBlock();
+	void SetNextBlock(CBBaseBlock *block);
+	void SetPreviousBlock(CBBaseBlock *block);
 
 };
  
