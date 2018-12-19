@@ -39,6 +39,7 @@ public:
         IfBlock_Canvas->resize(400, 32);
         IfBlock_Canvas->setMinimumSize(QSize(180, 32));
         IfBlock_Canvas->setMaximumSize(QSize(400, 32));
+        IfBlock_Canvas->setStyleSheet(QStringLiteral("background-color: rgb(181, 89, 255);"));
         horizontalLayout = new QHBoxLayout(IfBlock_Canvas);
         horizontalLayout->setSpacing(2);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -48,12 +49,12 @@ public:
         widget->setObjectName(QStringLiteral("widget"));
         widget->setMinimumSize(QSize(180, 32));
         widget->setMaximumSize(QSize(400, 32));
-        widget->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));"));
+        widget->setStyleSheet(QStringLiteral("background-color: rgb(181, 89, 255);"));
         horizontalLayout_2 = new QHBoxLayout(widget);
-        horizontalLayout_2->setSpacing(2);
+        horizontalLayout_2->setSpacing(20);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(3, 0, 3, 0);
+        horizontalLayout_2->setContentsMargins(8, 4, 8, 4);
         IF = new QLabel(widget);
         IF->setObjectName(QStringLiteral("IF"));
         IF->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
@@ -63,6 +64,8 @@ public:
         Param0 = new QPlainTextEdit(widget);
         Param0->setObjectName(QStringLiteral("Param0"));
         Param0->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        Param0->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        Param0->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
         horizontalLayout_2->addWidget(Param0);
 
@@ -75,6 +78,8 @@ public:
         Param1 = new QPlainTextEdit(widget);
         Param1->setObjectName(QStringLiteral("Param1"));
         Param1->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        Param1->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        Param1->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
         horizontalLayout_2->addWidget(Param1);
 

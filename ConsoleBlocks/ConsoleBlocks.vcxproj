@@ -129,6 +129,8 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Widgets\BlockBase\EndBlock_Canvas.cpp" />
+    <ClCompile Include="src\Widgets\BlockBase\EndBlock_Shelf.cpp" />
     <ClCompile Include="src\Widgets\BlockBase\PrintBlock_Canvas.cpp" />
     <ClCompile Include="src\Widgets\BlockBase\PrintBlock_Shelf.cpp" />
     <ClCompile Include="src\Widgets\BlockBase\IfBlock_Shelf.cpp" />
@@ -146,6 +148,8 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     <QtMoc Include="src\ConsoleBlocks.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="src\Widgets\BlockBase\EndBlock_Canvas.ui" />
+    <QtUic Include="src\Widgets\BlockBase\EndBlock_Shelf.ui" />
     <QtUic Include="src\Widgets\BlockBase\PrintBlock_Canvas.ui" />
     <QtUic Include="src\Widgets\BlockBase\PrintBlock_Shelf.ui" />
     <QtUic Include="src\Widgets\BlockBase\IfBlock_Shelf.ui" />
@@ -206,6 +210,18 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
     </QtMoc>
     <QtMoc Include="src\Widgets\BlockBase\PrintBlock_Canvas.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
+    </QtMoc>
+    <QtMoc Include="src\Widgets\BlockBase\EndBlock_Shelf.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
+    </QtMoc>
+    <QtMoc Include="src\Widgets\BlockBase\EndBlock_Canvas.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>

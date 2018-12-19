@@ -55,6 +55,7 @@ public:
 
         TE = new QTextEdit(widget);
         TE->setObjectName(QStringLiteral("TE"));
+        TE->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(TE);
 

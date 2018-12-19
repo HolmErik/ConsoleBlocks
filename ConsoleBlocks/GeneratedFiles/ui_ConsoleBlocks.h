@@ -23,7 +23,9 @@
 #include <QtWidgets/QWidget>
 #include "Canvas.h"
 #include "ConsoleWidget.h"
+#include "endblock_shelf.h"
 #include "ifblock_shelf.h"
+#include "printblock_shelf.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -40,8 +42,8 @@ public:
     QVBoxLayout *verticalLayout;
     QLabel *label;
     IfBlock_Shelf *widget_6;
-    IfBlock_Shelf *widget_5;
-    IfBlock_Shelf *widget_4;
+    PrintBlock_Shelf *widget_5;
+    EndBlock_Shelf *widget_4;
     IfBlock_Shelf *widget_3;
     IfBlock_Shelf *widget_2;
     IfBlock_Shelf *widget;
@@ -120,12 +122,12 @@ public:
 
         verticalLayout->addWidget(widget_6);
 
-        widget_5 = new IfBlock_Shelf(BlockShelf_Layout);
+        widget_5 = new PrintBlock_Shelf(BlockShelf_Layout);
         widget_5->setObjectName(QStringLiteral("widget_5"));
 
         verticalLayout->addWidget(widget_5);
 
-        widget_4 = new IfBlock_Shelf(BlockShelf_Layout);
+        widget_4 = new EndBlock_Shelf(BlockShelf_Layout);
         widget_4->setObjectName(QStringLiteral("widget_4"));
 
         verticalLayout->addWidget(widget_4);

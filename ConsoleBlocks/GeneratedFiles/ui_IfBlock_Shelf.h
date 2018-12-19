@@ -12,8 +12,9 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
-#include "CBBaseBlock.h"
+#include "cbbaseblock.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -22,6 +23,8 @@ class Ui_IfBlock_Shelf
 public:
     QHBoxLayout *horizontalLayout;
     QWidget *widget;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label;
 
     void setupUi(CBBaseBlock *IfBlock_Shelf)
     {
@@ -37,7 +40,18 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         widget = new QWidget(IfBlock_Shelf);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));"));
+        widget->setStyleSheet(QStringLiteral("background-color: rgb(181, 89, 255);"));
+        horizontalLayout_2 = new QHBoxLayout(widget);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_2->addWidget(label);
+
 
         horizontalLayout->addWidget(widget);
 
@@ -50,6 +64,7 @@ public:
     void retranslateUi(CBBaseBlock *IfBlock_Shelf)
     {
         IfBlock_Shelf->setWindowTitle(QApplication::translate("IfBlock_Shelf", "IfBlock_Shelf", nullptr));
+        label->setText(QApplication::translate("IfBlock_Shelf", "OMSATS!", nullptr));
     } // retranslateUi
 
 };

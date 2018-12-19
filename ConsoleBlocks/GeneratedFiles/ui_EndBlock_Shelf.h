@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'PrintBlock_Shelf.ui'
+** Form generated from reading UI file 'EndBlock_Shelf.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.11.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_PRINTBLOCK_SHELF_H
-#define UI_PRINTBLOCK_SHELF_H
+#ifndef UI_ENDBLOCK_SHELF_H
+#define UI_ENDBLOCK_SHELF_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
@@ -18,7 +18,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_PrintBlock_Shelf
+class Ui_EndBlock_Shelf
 {
 public:
     QVBoxLayout *verticalLayout;
@@ -26,21 +26,21 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
 
-    void setupUi(CBBaseBlock *PrintBlock_Shelf)
+    void setupUi(CBBaseBlock *EndBlock_Shelf)
     {
-        if (PrintBlock_Shelf->objectName().isEmpty())
-            PrintBlock_Shelf->setObjectName(QStringLiteral("PrintBlock_Shelf"));
-        PrintBlock_Shelf->resize(400, 32);
-        verticalLayout = new QVBoxLayout(PrintBlock_Shelf);
+        if (EndBlock_Shelf->objectName().isEmpty())
+            EndBlock_Shelf->setObjectName(QStringLiteral("EndBlock_Shelf"));
+        EndBlock_Shelf->resize(400, 32);
+        verticalLayout = new QVBoxLayout(EndBlock_Shelf);
         verticalLayout->setSpacing(0);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        widget = new QWidget(PrintBlock_Shelf);
+        widget = new QWidget(EndBlock_Shelf);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setStyleSheet(QStringLiteral("background-color: rgb(78, 255, 51);"));
+        widget->setStyleSheet(QStringLiteral("background-color: rgb(255, 151, 205);"));
         verticalLayout_2 = new QVBoxLayout(widget);
-        verticalLayout_2->setSpacing(0);
+        verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -54,23 +54,23 @@ public:
         verticalLayout->addWidget(widget);
 
 
-        retranslateUi(PrintBlock_Shelf);
+        retranslateUi(EndBlock_Shelf);
 
-        QMetaObject::connectSlotsByName(PrintBlock_Shelf);
+        QMetaObject::connectSlotsByName(EndBlock_Shelf);
     } // setupUi
 
-    void retranslateUi(CBBaseBlock *PrintBlock_Shelf)
+    void retranslateUi(CBBaseBlock *EndBlock_Shelf)
     {
-        PrintBlock_Shelf->setWindowTitle(QApplication::translate("PrintBlock_Shelf", "PrintBlock_Shelf", nullptr));
-        label->setText(QApplication::translate("PrintBlock_Shelf", "SKRIV UT:", nullptr));
+        EndBlock_Shelf->setWindowTitle(QApplication::translate("EndBlock_Shelf", "EndBlock_Shelf", nullptr));
+        label->setText(QApplication::translate("EndBlock_Shelf", "ST\303\204NG OM }", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class PrintBlock_Shelf: public Ui_PrintBlock_Shelf {};
+    class EndBlock_Shelf: public Ui_EndBlock_Shelf {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_PRINTBLOCK_SHELF_H
+#endif // UI_ENDBLOCK_SHELF_H

@@ -10,9 +10,9 @@ IfBlock_Canvas::IfBlock_Canvas(QWidget *parent)
 
 	int i = 0;
 	QStringList operators;
-	operators.push_back(tr("Lika med"));
-	operators.push_back(tr("större än"));
-	operators.push_back(tr("mindre än"));
+	operators.push_back(tr("Är lika med"));
+	operators.push_back(tr("Är större än"));
+	operators.push_back(tr("Är mindre än"));
 	dropDown->insertItems(i++, operators);
 
 }
