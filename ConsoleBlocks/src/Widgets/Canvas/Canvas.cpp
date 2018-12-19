@@ -1,7 +1,8 @@
 #include "Canvas.h"
 
 QWidget* Canvas::me = nullptr;
-CBBaseBlock * Canvas::startBlock;
+CBBaseBlock* Canvas::startBlock = nullptr;
+QWidget* Canvas::blockParent = nullptr;
 
 Canvas::Canvas(QWidget *parent)
 	: QWidget(parent)
@@ -11,7 +12,9 @@ Canvas::Canvas(QWidget *parent)
 		me = this;
 	else
 		delete this;
-	
+
+
+	blockParent = me->findChild<QWidget*>("BlockParent");
 }
 
 
@@ -30,4 +33,5 @@ CBBaseBlock* Canvas::FindLastBlock()
 
 Canvas::~Canvas()
 {
+
 }

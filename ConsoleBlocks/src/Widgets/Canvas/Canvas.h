@@ -15,12 +15,13 @@ public:
 	Canvas(QWidget *parent = Q_NULLPTR);
 	~Canvas();
 	static CBBaseBlock *startBlock;
+	static QWidget *blockParent;
 
 	template<class T>
 	static void CreateBlock()
 	{
-		T *n = new T(me);
-		me->layout()->addWidget(n);
+		T *n = new T(blockParent);
+		blockParent->layout()->addWidget(n);
 		FindLastBlock()->SetNextBlock(n);
 	}
 
