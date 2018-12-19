@@ -13,6 +13,7 @@ IfBlock_Canvas::IfBlock_Canvas(QWidget *parent)
 	operators.push_back(tr("Är lika med"));
 	operators.push_back(tr("Är större än"));
 	operators.push_back(tr("Är mindre än"));
+	operators.push_back(tr("Inte är samma"));
 	dropDown->insertItems(i++, operators);
 
 }
@@ -25,17 +26,21 @@ std::string IfBlock_Canvas::getCodeLine()
 {
 	std::string code;
 	code += "if(" + param0->toPlainText().toStdString();
-	if (true) //LIKA MED
+	if (dropDown->currentIndex() == 0) //LIKA MED
 	{
 		code +=  "==";
 	}
-	else if (false) //Större
+	else if (dropDown->currentIndex() == 1) //Större
 	{
 		code += ">";
 	}
-	else if (false) //MINDRE
+	else if (dropDown->currentIndex() == 2) //MINDRE
 	{
 		code += "<";
+	}
+	else if (dropDown->currentIndex() == 3) //OLIKA
+	{
+		code += "!=";
 	}
 	code += param1->toPlainText().toStdString() + ") \n {";
 	return code;
