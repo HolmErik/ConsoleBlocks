@@ -11,32 +11,53 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFrame>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "cbstartblock.h"
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Canvas
 {
 public:
-    QFrame *frame;
+    QVBoxLayout *verticalLayout_2;
+    QScrollArea *scrollArea;
+    QWidget *BlockParent;
+    QVBoxLayout *verticalLayout;
+    CBStartBlock *StartBlock;
 
     void setupUi(QWidget *Canvas)
     {
         if (Canvas->objectName().isEmpty())
             Canvas->setObjectName(QStringLiteral("Canvas"));
         Canvas->resize(400, 300);
-        frame = new QFrame(Canvas);
-        frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(0, 0, 400, 300));
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy);
-        frame->setStyleSheet(QStringLiteral("background-color: rgb(0, 255, 255);"));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
+        Canvas->setStyleSheet(QLatin1String("background-color: rgb(0, 255, 255);\n"
+"background-color: rgb(0, 255, 255);"));
+        verticalLayout_2 = new QVBoxLayout(Canvas);
+        verticalLayout_2->setSpacing(0);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(2, 2, 2, 2);
+        scrollArea = new QScrollArea(Canvas);
+        scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        scrollArea->setWidgetResizable(true);
+        BlockParent = new QWidget();
+        BlockParent->setObjectName(QStringLiteral("BlockParent"));
+        BlockParent->setGeometry(QRect(0, 0, 394, 294));
+        verticalLayout = new QVBoxLayout(BlockParent);
+        verticalLayout->setSpacing(2);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        StartBlock = new CBStartBlock(BlockParent);
+        StartBlock->setObjectName(QStringLiteral("StartBlock"));
+
+        verticalLayout->addWidget(StartBlock);
+
+        scrollArea->setWidget(BlockParent);
+
+        verticalLayout_2->addWidget(scrollArea);
+
 
         retranslateUi(Canvas);
 

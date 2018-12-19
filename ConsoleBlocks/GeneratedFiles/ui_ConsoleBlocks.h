@@ -23,7 +23,6 @@
 #include <QtWidgets/QWidget>
 #include "Canvas.h"
 #include "ConsoleWidget.h"
-#include "cbstartblock.h"
 #include "ifblock_shelf.h"
 
 QT_BEGIN_NAMESPACE
@@ -51,7 +50,6 @@ public:
     QPushButton *pushButton;
     Canvas *canvas;
     QVBoxLayout *verticalLayout_4;
-    CBStartBlock *StartBlock;
     ConsoleWidget *CW;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -171,17 +169,11 @@ public:
 
         canvas = new Canvas(WorkSpace);
         canvas->setObjectName(QStringLiteral("canvas"));
-        canvas->setStyleSheet(QStringLiteral(""));
+        canvas->setStyleSheet(QStringLiteral("background-color: rgb(0, 255, 255);"));
         verticalLayout_4 = new QVBoxLayout(canvas);
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        verticalLayout_4->setSizeConstraint(QLayout::SetNoConstraint);
-        StartBlock = new CBStartBlock(canvas);
-        StartBlock->setObjectName(QStringLiteral("StartBlock"));
-
-        verticalLayout_4->addWidget(StartBlock);
-
 
         horizontalLayout_2->addWidget(canvas);
 

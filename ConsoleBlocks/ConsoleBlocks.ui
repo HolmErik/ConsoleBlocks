@@ -175,16 +175,9 @@
        <item>
         <widget class="Canvas" name="canvas" native="true">
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">background-color: rgb(0, 255, 255);</string>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetNoConstraint</enum>
-          </property>
-          <item>
-           <widget class="CBStartBlock" name="StartBlock" native="true"/>
-          </item>
-         </layout>
+         <layout class="QVBoxLayout" name="verticalLayout_4"/>
         </widget>
        </item>
       </layout>
@@ -234,12 +227,6 @@
    <class>Canvas</class>
    <extends>QWidget</extends>
    <header>Canvas.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>CBStartBlock</class>
-   <extends>QWidget</extends>
-   <header>cbstartblock.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
