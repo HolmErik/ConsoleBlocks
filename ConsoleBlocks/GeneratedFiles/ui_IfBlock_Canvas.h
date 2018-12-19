@@ -11,9 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QWidget>
-#include "CBBaseBlock.h"
+#include "cbbaseblock.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -22,6 +25,12 @@ class Ui_IfBlock_Canvas
 public:
     QHBoxLayout *horizontalLayout;
     QWidget *widget;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *IF;
+    QPlainTextEdit *Param0;
+    QComboBox *DropDown;
+    QPlainTextEdit *Param1;
+    QLabel *DO;
 
     void setupUi(CBBaseBlock *IfBlock_Canvas)
     {
@@ -40,6 +49,41 @@ public:
         widget->setMinimumSize(QSize(180, 32));
         widget->setMaximumSize(QSize(400, 32));
         widget->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));"));
+        horizontalLayout_2 = new QHBoxLayout(widget);
+        horizontalLayout_2->setSpacing(2);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(3, 0, 3, 0);
+        IF = new QLabel(widget);
+        IF->setObjectName(QStringLiteral("IF"));
+        IF->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_2->addWidget(IF);
+
+        Param0 = new QPlainTextEdit(widget);
+        Param0->setObjectName(QStringLiteral("Param0"));
+        Param0->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_2->addWidget(Param0);
+
+        DropDown = new QComboBox(widget);
+        DropDown->setObjectName(QStringLiteral("DropDown"));
+        DropDown->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_2->addWidget(DropDown);
+
+        Param1 = new QPlainTextEdit(widget);
+        Param1->setObjectName(QStringLiteral("Param1"));
+        Param1->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_2->addWidget(Param1);
+
+        DO = new QLabel(widget);
+        DO->setObjectName(QStringLiteral("DO"));
+        DO->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_2->addWidget(DO);
+
 
         horizontalLayout->addWidget(widget);
 
@@ -52,6 +96,8 @@ public:
     void retranslateUi(CBBaseBlock *IfBlock_Canvas)
     {
         IfBlock_Canvas->setWindowTitle(QApplication::translate("IfBlock_Canvas", "IfBlock_Canvas", nullptr));
+        IF->setText(QApplication::translate("IfBlock_Canvas", "OM:", nullptr));
+        DO->setText(QApplication::translate("IfBlock_Canvas", "G\303\226R:", nullptr));
     } // retranslateUi
 
 };

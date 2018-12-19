@@ -2,6 +2,8 @@
 
 #include <CBBaseBlock.h>
 #include "ui_IfBlock_Canvas.h"
+#include <QtWidgets/qcombobox.h>
+#include <QtWidgets/qplaintextedit.h>
 
 class IfBlock_Canvas : public CBBaseBlock
 {
@@ -10,7 +12,11 @@ class IfBlock_Canvas : public CBBaseBlock
 public:
 	IfBlock_Canvas(QWidget *parent = Q_NULLPTR);
 	~IfBlock_Canvas();
+	std::string getCodeLine();
 
 private:
+	QPlainTextEdit *param0;
+	QPlainTextEdit *param1;
 	Ui::IfBlock_Canvas ui;
+	QComboBox *dropDown; 
 };
