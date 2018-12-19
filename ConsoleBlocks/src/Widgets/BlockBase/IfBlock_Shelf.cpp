@@ -25,7 +25,7 @@ void IfBlock_Shelf::mouseReleaseEvent(QMouseEvent *e)
 	//{
 		if (this->parentWidget()->objectName() == tr("BlockShelf_Layout") && e->button() == Qt::LeftButton)
 		{
-			Canvas::CreateBlock<PrintBlock_Canvas>();
+			Canvas::CreateBlock<IfBlock_Canvas>();
 		}
 	//}
 }
