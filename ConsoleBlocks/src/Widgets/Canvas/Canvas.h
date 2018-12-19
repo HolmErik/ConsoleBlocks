@@ -22,9 +22,13 @@ public:
 	{
 		T *n = new T(blockParent);
 		blockParent->layout()->addWidget(n);
-		FindLastBlock()->SetNextBlock(n);
+		CBBaseBlock* b = FindLastBlock();
+		b->SetNextBlock(n);
+		n->SetPreviousBlock(b);
 	}
 
+
+	static void DeleteBlock(CBBaseBlock* block);
 
 private:
 	static QWidget* me;

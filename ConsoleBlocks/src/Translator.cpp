@@ -35,3 +35,20 @@ std::string Translator::GetScript()
 	CloseFile();
 	return fileName;
 }
+
+bool Translator::TranslateAllBlocks()
+{
+	CBBaseBlock *tmp = Canvas::startBlock->GetNextBlock();
+	if (tmp == nullptr)
+		return false;
+
+	while (tmp != nullptr)
+	{
+		this->OutPut(tmp->getCodeLine());
+		tmp = tmp->GetNextBlock();
+	}
+
+	return true;
+
+
+}

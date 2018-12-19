@@ -5,9 +5,6 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 {
 
 
-	translator.OutPut(R"(CBPrint("Hello World");)");
-
-
 	ui.setupUi(this);
 	canvas = findChild<Canvas*>("canvas");
 	Canvas::startBlock = findChild<CBStartBlock*>("StartBlock");
@@ -20,5 +17,8 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 
 void ConsoleBlocks::on_pushButton_clicked()
 {
-	console->printFile("src/scripts/output.txt");
+	
+	if(translator.TranslateAllBlocks())
+		scriptExecuter->eval_file(translator.GetScript());
+	else return;
 }

@@ -1,4 +1,5 @@
 #include "CBBaseBlock.h"
+#include "consoleWidget/ConsoleWidget.h"
 
 
 //Canvas* CBBaseBlock::canvas = nullptr;
@@ -17,7 +18,7 @@ CBBaseBlock::~CBBaseBlock()
 
 CBBaseBlock* CBBaseBlock::GetNextBlock()
 {
-	if(nextBlock)
+	if(nextBlock != nullptr)
 		return nextBlock;
 	else return nullptr;
 }
@@ -38,4 +39,9 @@ void CBBaseBlock::SetNextBlock(CBBaseBlock *block)
 void CBBaseBlock::SetPreviousBlock(CBBaseBlock *block)
 {
 	previousBlock = block;
+}
+
+std::string CBBaseBlock::getCodeLine()
+{
+	return code;
 }

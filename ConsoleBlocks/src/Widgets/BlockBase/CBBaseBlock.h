@@ -19,8 +19,6 @@ public:
 
 private:
 	Ui::CBBaseBlock ui;
-	//virtual void mousePressEvent(QMouseEvent*);
-	//virtual void mouseReleaseEvent(QMouseEvent*);
 
 
 	CBBaseBlock *previousBlock = nullptr;
@@ -33,6 +31,7 @@ public:
 	CBBaseBlock* GetNextBlock();
 	void SetNextBlock(CBBaseBlock *block);
 	void SetPreviousBlock(CBBaseBlock *block);
+	virtual std::string getCodeLine();
 
 };
  

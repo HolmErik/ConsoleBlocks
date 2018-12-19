@@ -31,6 +31,20 @@ CBBaseBlock* Canvas::FindLastBlock()
 	return tmp;
 }
 
+void Canvas::DeleteBlock(CBBaseBlock *block)
+{
+	block->GetPreviousBlock()->SetNextBlock(block->GetNextBlock());
+	if (block->GetNextBlock())
+		block->GetNextBlock()->SetPreviousBlock(block->GetPreviousBlock());
+	
+	block->SetPreviousBlock(nullptr);
+	block->SetNextBlock(nullptr);
+
+
+	blockParent->layout()->removeWidget(block);
+	block->deleteLater();
+}
+
 Canvas::~Canvas()
 {
 

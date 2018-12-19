@@ -3,6 +3,7 @@
 #include <CBBaseBlock.h>
 #include "ui_IfBlock_Shelf.h"
 #include "IfBlock_Canvas.h"
+#include "PrintBlock_Canvas.h"
 #include "Canvas/Canvas.h"
 
 class IfBlock_Shelf : public CBBaseBlock

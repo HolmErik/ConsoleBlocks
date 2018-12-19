@@ -21,13 +21,11 @@ void IfBlock_Shelf::mousePressEvent(QMouseEvent *e)
 void IfBlock_Shelf::mouseReleaseEvent(QMouseEvent *e)
 {
 	//depending on what block this function will look different
-	if (QWidget::window()->childAt(e->windowPos().x(), e->windowPos().y())->underMouse())//if widget under mouse is under mouse??
-	{
-		if (this->parentWidget()->objectName() == tr("BlockShelf_Layout"))
+	//if (QWidget::window()->childAt(e->windowPos().x(), e->windowPos().y())->underMouse())//if widget under mouse is under mouse??
+	//{
+		if (this->parentWidget()->objectName() == tr("BlockShelf_Layout") && e->button() == Qt::LeftButton)
 		{
-			Canvas::CreateBlock<IfBlock_Canvas>();
-			//this->layout()->addWidget(n);
-			//n->setParent(CBBaseBlock::canvas);
+			Canvas::CreateBlock<PrintBlock_Canvas>();
 		}
-	}
+	//}
 }

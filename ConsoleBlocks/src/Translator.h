@@ -1,6 +1,7 @@
 #pragma once
 
 #include <fstream>
+#include "Canvas/Canvas.h"
 
 class Translator
 {
@@ -9,6 +10,7 @@ public:
 	~Translator();
 
 	void OutPut(const std::string code);
+	bool TranslateAllBlocks();
 	void CloseFile();
 	std::string GetScript();
 private:

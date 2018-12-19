@@ -3,7 +3,7 @@
 #include <CBBaseBlock.h>
 #include "ui_PrintBlock_Canvas.h"
 #include "QtWidgets/qtextedit.h"
-
+#include "Canvas/Canvas.h"
 class PrintBlock_Canvas : public CBBaseBlock
 {
 	Q_OBJECT
@@ -11,9 +11,12 @@ class PrintBlock_Canvas : public CBBaseBlock
 public:
 	PrintBlock_Canvas(QWidget *parent = Q_NULLPTR);
 	~PrintBlock_Canvas();
-	std::string GetInputString();
+	std::string getCodeLine() override;
+	void mouseReleaseEvent(QMouseEvent* e);
+	
 
 private:
 	Ui::PrintBlock_Canvas ui;
 	QTextEdit *inputValue;
+	std::string GetInputString();
 };
