@@ -72,6 +72,12 @@
     <ClCompile Include="src\Widgets\BlockBase\EndBlock_Shelf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Widgets\BlockBase\VariableBlock_Canvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Widgets\BlockBase\VariableBlock_Shelf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ConsoleBlocks.ui">
@@ -105,6 +111,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="src\Widgets\BlockBase\EndBlock_Canvas.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\Widgets\BlockBase\VariableBlock_Shelf.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\Widgets\BlockBase\VariableBlock_Canvas.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -145,6 +157,12 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="src\Widgets\BlockBase\EndBlock_Shelf.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\Widgets\BlockBase\VariableBlock_Canvas.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\Widgets\BlockBase\VariableBlock_Shelf.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

@@ -4,6 +4,8 @@
 #include "ui_PrintBlock_Canvas.h"
 #include "QtWidgets/qtextedit.h"
 #include "Canvas/Canvas.h"
+#include <QtWidgets/qcombobox.h>
+
 class PrintBlock_Canvas : public CBBaseBlock
 {
 	Q_OBJECT
@@ -18,5 +20,6 @@ public:
 private:
 	Ui::PrintBlock_Canvas ui;
 	QTextEdit *inputValue;
+	QComboBox *dropDown;
 	std::string GetInputString();
 };

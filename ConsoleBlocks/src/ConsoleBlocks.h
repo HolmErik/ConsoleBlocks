@@ -23,6 +23,6 @@ private slots:
 private:
 	Ui::ConsoleBlocksClass ui;
 	Translator translator;
-	chaiscript::ChaiScript* scriptExecuter;
+	//chaiscript::ChaiScript* scriptExecuter;
 
 };

@@ -45,3 +45,15 @@ std::string IfBlock_Canvas::getCodeLine()
 	code += param1->toPlainText().toStdString() + ") \n {";
 	return code;
 }
+void IfBlock_Canvas::mouseReleaseEvent(QMouseEvent* e)
+{
+	if (e->button() == Qt::LeftButton)
+	{
+		//select this block
+	}
+
+	if (e->button() == Qt::RightButton)
+	{
+		Canvas::DeleteBlock(this);
+	}
+}

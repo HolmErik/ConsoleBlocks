@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PrintBlock_Canvas</class>
- <widget class="CBBaseBlock" name="PrintBlock_Canvas">
+ <class>VariableBlock_Canvas</class>
+ <widget class="CBBaseBlock" name="VariableBlock_Canvas">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,9 +17,9 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>PrintBlock_Canvas</string>
+   <string>VariableBlock_Canvas</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -39,14 +39,14 @@
     <widget class="QWidget" name="widget" native="true">
      <property name="maximumSize">
       <size>
-       <width>400</width>
+       <width>16777215</width>
        <height>32</height>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(78, 255, 51);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <property name="leftMargin">
        <number>8</number>
       </property>
@@ -61,28 +61,65 @@
       </property>
       <item>
        <widget class="QLabel" name="label">
+        <property name="text">
+         <string>DEFINERA:</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::PlainText</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="InputName">
         <property name="maximumSize">
          <size>
-          <width>100</width>
+          <width>16777215</width>
           <height>32</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>SKRIV UT:</string>
+         <string>SOM</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::PlainText</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="DropDown">
+       <widget class="QPlainTextEdit" name="InputValue">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>32</height>
+         </size>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTextEdit" name="TE">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
        </widget>
       </item>

@@ -18,3 +18,4 @@ void ScriptFunctions::CBPrint(const std::string &output)
 {
 	ConsoleWidget::print(output);
 }
+

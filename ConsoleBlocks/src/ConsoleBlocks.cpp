@@ -10,15 +10,17 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 	Canvas::startBlock = findChild<CBStartBlock*>("StartBlock");
 
 	
-	scriptExecuter = new chaiscript::ChaiScript();
-	ScriptFunctions::AddFunctions(scriptExecuter);
-	scriptExecuter->eval_file(translator.GetScript());
+	//scriptExecuter = new chaiscript::ChaiScript();
+	//ScriptFunctions::AddFunctions(scriptExecuter);
+	//scriptExecuter->eval_file(translator.GetScript());
 }
 
 void ConsoleBlocks::on_pushButton_clicked()
 {
-	
-	if(translator.TranslateAllBlocks())
-		scriptExecuter->eval_file(translator.GetScript());
-	else return;
+	chaiscript::ChaiScript *tmpChai = new chaiscript::ChaiScript();
+	ScriptFunctions::AddFunctions(tmpChai);
+	if (translator.TranslateAllBlocks()) {
+		tmpChai->eval_file(translator.GetScript());
+	}
+	delete(tmpChai);
 }

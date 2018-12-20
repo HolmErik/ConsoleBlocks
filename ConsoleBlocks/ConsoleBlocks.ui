@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>899</width>
-    <height>623</height>
+    <height>624</height>
    </rect>
   </property>
   <property name="font">
@@ -127,7 +127,7 @@
               <widget class="EndBlock_Shelf" name="widget_4" native="true"/>
              </item>
              <item>
-              <widget class="IfBlock_Shelf" name="widget_3" native="true"/>
+              <widget class="VariableBlock_Shelf" name="widget_3" native="true"/>
              </item>
              <item>
               <widget class="IfBlock_Shelf" name="widget_2" native="true"/>
@@ -201,7 +201,7 @@
      <x>0</x>
      <y>0</y>
      <width>899</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -245,6 +245,12 @@
    <class>EndBlock_Shelf</class>
    <extends>QWidget</extends>
    <header>endblock_shelf.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VariableBlock_Shelf</class>
+   <extends>QWidget</extends>
+   <header>VariableBlock_Shelf.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

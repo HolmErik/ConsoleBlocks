@@ -143,6 +143,8 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     <ClCompile Include="src\ConsoleBlocks.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Translator.cpp" />
+    <ClCompile Include="src\Widgets\BlockBase\VariableBlock_Canvas.cpp" />
+    <ClCompile Include="src\Widgets\BlockBase\VariableBlock_Shelf.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\ConsoleBlocks.h" />
@@ -159,6 +161,8 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     <QtUic Include="src\Widgets\ConsoleWidget\ConsoleWidget.ui" />
     <QtUic Include="src\Widgets\BlockBase\CBBaseBlock.ui" />
     <QtUic Include="ConsoleBlocks.ui" />
+    <QtUic Include="src\Widgets\BlockBase\VariableBlock_Canvas.ui" />
+    <QtUic Include="src\Widgets\BlockBase\VariableBlock_Shelf.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="ConsoleBlocks.qrc" />
@@ -191,6 +195,18 @@ xcopy "$(QTDIR)\bin\Qt5Gui.dll" "$(SolutionDir)bin\$(Platform)\$(Configuration)"
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="src\Widgets\BlockBase\VariableBlock_Shelf.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
+    </QtMoc>
+    <QtMoc Include="src\Widgets\BlockBase\VariableBlock_Canvas.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG</Define>
+    </QtMoc>
     <QtMoc Include="src\Widgets\BlockBase\IfBlock_Canvas.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(ProjectDir)src\Widgets;$(ProjectDir)src\Widgets\BlockBase;$(ProjectDir)src\Widgets\Blocks;$(ProjectDir)vendor\include;$(ProjectDir)src\Widgets\ConsoleWidget;$(ProjectDir)src\Widgets\Canvas</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64</Define>

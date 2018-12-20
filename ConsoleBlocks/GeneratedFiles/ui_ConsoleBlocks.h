@@ -23,6 +23,7 @@
 #include <QtWidgets/QWidget>
 #include "Canvas.h"
 #include "ConsoleWidget.h"
+#include "VariableBlock_Shelf.h"
 #include "endblock_shelf.h"
 #include "ifblock_shelf.h"
 #include "printblock_shelf.h"
@@ -44,7 +45,7 @@ public:
     IfBlock_Shelf *widget_6;
     PrintBlock_Shelf *widget_5;
     EndBlock_Shelf *widget_4;
-    IfBlock_Shelf *widget_3;
+    VariableBlock_Shelf *widget_3;
     IfBlock_Shelf *widget_2;
     IfBlock_Shelf *widget;
     QWidget *widget_8;
@@ -61,7 +62,7 @@ public:
     {
         if (ConsoleBlocksClass->objectName().isEmpty())
             ConsoleBlocksClass->setObjectName(QStringLiteral("ConsoleBlocksClass"));
-        ConsoleBlocksClass->resize(899, 623);
+        ConsoleBlocksClass->resize(899, 624);
         QFont font;
         font.setItalic(false);
         font.setUnderline(false);
@@ -132,7 +133,7 @@ public:
 
         verticalLayout->addWidget(widget_4);
 
-        widget_3 = new IfBlock_Shelf(BlockShelf_Layout);
+        widget_3 = new VariableBlock_Shelf(BlockShelf_Layout);
         widget_3->setObjectName(QStringLiteral("widget_3"));
 
         verticalLayout->addWidget(widget_3);
@@ -191,7 +192,7 @@ public:
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 899, 22));
+        menuBar->setGeometry(QRect(0, 0, 899, 21));
         ConsoleBlocksClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ConsoleBlocksClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

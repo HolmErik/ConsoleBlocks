@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QTextEdit>
@@ -27,6 +28,7 @@ public:
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
+    QComboBox *DropDown;
     QTextEdit *TE;
 
     void setupUi(CBBaseBlock *PrintBlock_Canvas)
@@ -34,6 +36,7 @@ public:
         if (PrintBlock_Canvas->objectName().isEmpty())
             PrintBlock_Canvas->setObjectName(QStringLiteral("PrintBlock_Canvas"));
         PrintBlock_Canvas->resize(400, 32);
+        PrintBlock_Canvas->setMaximumSize(QSize(400, 32));
         verticalLayout = new QVBoxLayout(PrintBlock_Canvas);
         verticalLayout->setSpacing(0);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -41,17 +44,24 @@ public:
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         widget = new QWidget(PrintBlock_Canvas);
         widget->setObjectName(QStringLiteral("widget"));
+        widget->setMaximumSize(QSize(400, 32));
         widget->setStyleSheet(QStringLiteral("background-color: rgb(78, 255, 51);"));
         horizontalLayout = new QHBoxLayout(widget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 3, 0);
+        horizontalLayout->setContentsMargins(8, 4, 8, 4);
         label = new QLabel(widget);
         label->setObjectName(QStringLiteral("label"));
         label->setMaximumSize(QSize(100, 32));
 
         horizontalLayout->addWidget(label);
+
+        DropDown = new QComboBox(widget);
+        DropDown->setObjectName(QStringLiteral("DropDown"));
+        DropDown->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout->addWidget(DropDown);
 
         TE = new QTextEdit(widget);
         TE->setObjectName(QStringLiteral("TE"));

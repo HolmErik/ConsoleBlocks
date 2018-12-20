@@ -57,7 +57,7 @@ public:
         horizontalLayout_2->setContentsMargins(8, 4, 8, 4);
         IF = new QLabel(widget);
         IF->setObjectName(QStringLiteral("IF"));
-        IF->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        IF->setStyleSheet(QStringLiteral("background-color: rgb(181, 89, 255);"));
 
         horizontalLayout_2->addWidget(IF);
 
@@ -85,7 +85,7 @@ public:
 
         DO = new QLabel(widget);
         DO->setObjectName(QStringLiteral("DO"));
-        DO->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        DO->setStyleSheet(QStringLiteral("background-color: rgb(181, 89, 255);"));
 
         horizontalLayout_2->addWidget(DO);
 

@@ -6,6 +6,13 @@ PrintBlock_Canvas::PrintBlock_Canvas(QWidget *parent)
 {
 	ui.setupUi(this);
 	inputValue = findChild<QTextEdit*>("TE");
+	dropDown = findChild<QComboBox*>("DropDown");
+
+	int i = 0;
+	QStringList operators;
+	operators.push_back(tr("Text"));
+	operators.push_back(tr("Variabel"));
+	dropDown->insertItems(i++, operators);
 }
 
 PrintBlock_Canvas::~PrintBlock_Canvas()
@@ -19,7 +26,18 @@ std::string PrintBlock_Canvas::getCodeLine()
 
 std::string PrintBlock_Canvas::GetInputString()
 {
-	std::string code = "CBPrint(\"" + inputValue->toPlainText().toStdString() + "\");";
+	std::string code = "CBPrint(";
+
+	if (dropDown->currentIndex() == 0) //Text
+	{
+		code +=  "\"" + inputValue->toPlainText().toStdString() + "\"";
+	}
+	else if (dropDown->currentIndex() == 1) //Variabel
+	{
+		code += inputValue->toPlainText().toStdString();
+	}
+	code += ");";
+	// CBPrint(A);
 	return code;
 }
 
