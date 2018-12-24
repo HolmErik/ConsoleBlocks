@@ -24,8 +24,6 @@ void EndBlock_Shelf::mouseReleaseEvent(QMouseEvent *e)
 		if (this->parentWidget()->objectName() == tr("BlockShelf_Layout"))
 		{
 			Canvas::CreateBlock<EndBlock_Canvas>();
-			//this->layout()->addWidget(n);
-			//n->setParent(CBBaseBlock::canvas);
 		}
 	}
 }

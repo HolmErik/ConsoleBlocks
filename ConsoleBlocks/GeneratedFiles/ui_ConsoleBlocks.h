@@ -26,6 +26,8 @@
 #include "VariableBlock_Shelf.h"
 #include "endblock_shelf.h"
 #include "ifblock_shelf.h"
+#include "loopblock_shelf.h"
+#include "mathblock_shelf.h"
 #include "printblock_shelf.h"
 
 QT_BEGIN_NAMESPACE
@@ -44,10 +46,10 @@ public:
     QLabel *label;
     IfBlock_Shelf *widget_6;
     PrintBlock_Shelf *widget_5;
-    EndBlock_Shelf *widget_4;
+    MathBlock_Shelf *widget_4;
     VariableBlock_Shelf *widget_3;
-    IfBlock_Shelf *widget_2;
-    IfBlock_Shelf *widget;
+    LoopBlock_Shelf *widget_2;
+    EndBlock_Shelf *widget;
     QWidget *widget_8;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton;
@@ -128,7 +130,7 @@ public:
 
         verticalLayout->addWidget(widget_5);
 
-        widget_4 = new EndBlock_Shelf(BlockShelf_Layout);
+        widget_4 = new MathBlock_Shelf(BlockShelf_Layout);
         widget_4->setObjectName(QStringLiteral("widget_4"));
 
         verticalLayout->addWidget(widget_4);
@@ -138,12 +140,12 @@ public:
 
         verticalLayout->addWidget(widget_3);
 
-        widget_2 = new IfBlock_Shelf(BlockShelf_Layout);
+        widget_2 = new LoopBlock_Shelf(BlockShelf_Layout);
         widget_2->setObjectName(QStringLiteral("widget_2"));
 
         verticalLayout->addWidget(widget_2);
 
-        widget = new IfBlock_Shelf(BlockShelf_Layout);
+        widget = new EndBlock_Shelf(BlockShelf_Layout);
         widget->setObjectName(QStringLiteral("widget"));
 
         verticalLayout->addWidget(widget);
@@ -192,7 +194,7 @@ public:
         ConsoleBlocksClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ConsoleBlocksClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 899, 21));
+        menuBar->setGeometry(QRect(0, 0, 899, 22));
         ConsoleBlocksClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ConsoleBlocksClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

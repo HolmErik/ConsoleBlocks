@@ -124,16 +124,16 @@
               <widget class="PrintBlock_Shelf" name="widget_5" native="true"/>
              </item>
              <item>
-              <widget class="EndBlock_Shelf" name="widget_4" native="true"/>
+              <widget class="MathBlock_Shelf" name="widget_4" native="true"/>
              </item>
              <item>
               <widget class="VariableBlock_Shelf" name="widget_3" native="true"/>
              </item>
              <item>
-              <widget class="IfBlock_Shelf" name="widget_2" native="true"/>
+              <widget class="LoopBlock_Shelf" name="widget_2" native="true"/>
              </item>
              <item>
-              <widget class="IfBlock_Shelf" name="widget" native="true"/>
+              <widget class="EndBlock_Shelf" name="widget" native="true"/>
              </item>
             </layout>
            </widget>
@@ -201,7 +201,7 @@
      <x>0</x>
      <y>0</y>
      <width>899</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
@@ -251,6 +251,18 @@
    <class>VariableBlock_Shelf</class>
    <extends>QWidget</extends>
    <header>VariableBlock_Shelf.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LoopBlock_Shelf</class>
+   <extends>QWidget</extends>
+   <header>loopblock_shelf.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MathBlock_Shelf</class>
+   <extends>QWidget</extends>
+   <header>mathblock_shelf.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
