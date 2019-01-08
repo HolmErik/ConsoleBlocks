@@ -12,6 +12,11 @@ CBBaseBlock::CBBaseBlock(QWidget *parent) : QWidget(parent)
 
 }
 
+void CBBaseBlock::UpdateBlock()
+{
+
+}
+
 CBBaseBlock::~CBBaseBlock()
 {
 }

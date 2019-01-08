@@ -34,7 +34,7 @@ std::string PrintBlock_Canvas::GetInputString()
 	}
 	else if (dropDown->currentIndex() == 1) //Variabel
 	{
-		code += inputValue->toPlainText().toStdString();
+		code += "to_string(" + inputValue->toPlainText().toStdString() + ")";
 	}
 	code += ");";
 	// CBPrint(A);

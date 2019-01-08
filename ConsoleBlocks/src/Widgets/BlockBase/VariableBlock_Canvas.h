@@ -14,6 +14,7 @@ public:
 	~VariableBlock_Canvas();
 	std::string getCodeLine() override;
 	void mouseReleaseEvent(QMouseEvent* e);
+	QString getInputName() const;
 
 private:
 	QPlainTextEdit *inputName;

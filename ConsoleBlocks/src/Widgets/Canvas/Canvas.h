@@ -25,10 +25,12 @@ public:
 		CBBaseBlock* b = FindLastBlock();
 		b->SetNextBlock(n);
 		n->SetPreviousBlock(b);
+		n->UpdateBlock();
 	}
 
 
 	static void DeleteBlock(CBBaseBlock* block);
+	static void UpdateAllBlocks();
 
 private:
 	static QWidget* me;

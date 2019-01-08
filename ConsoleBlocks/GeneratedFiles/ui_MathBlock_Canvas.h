@@ -26,7 +26,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QWidget *widget;
     QHBoxLayout *horizontalLayout_2;
-    QPlainTextEdit *InParam0;
+    QComboBox *VarDropDown;
     QLabel *label;
     QPlainTextEdit *InParam1;
     QComboBox *DropDown;
@@ -50,14 +50,11 @@ public:
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(8, 4, 8, 4);
-        InParam0 = new QPlainTextEdit(widget);
-        InParam0->setObjectName(QStringLiteral("InParam0"));
-        InParam0->setMaximumSize(QSize(16777215, 24));
-        InParam0->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
-        InParam0->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        InParam0->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        VarDropDown = new QComboBox(widget);
+        VarDropDown->setObjectName(QStringLiteral("VarDropDown"));
+        VarDropDown->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_2->addWidget(InParam0);
+        horizontalLayout_2->addWidget(VarDropDown);
 
         label = new QLabel(widget);
         label->setObjectName(QStringLiteral("label"));

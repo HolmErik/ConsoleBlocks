@@ -43,6 +43,18 @@ void Canvas::DeleteBlock(CBBaseBlock *block)
 
 	blockParent->layout()->removeWidget(block);
 	block->deleteLater();
+	UpdateAllBlocks();
+}
+
+
+void Canvas::UpdateAllBlocks()
+{
+	CBBaseBlock* tmp = startBlock->GetNextBlock();
+	while (tmp != nullptr)
+	{
+		tmp->UpdateBlock();
+		tmp = tmp->GetNextBlock();
+	}
 }
 
 Canvas::~Canvas()

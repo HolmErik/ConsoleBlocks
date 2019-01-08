@@ -1,0 +1,4 @@
+var A = 3;
+var F = 2;
+A = A + F;
+CBPrint(to_string(A));

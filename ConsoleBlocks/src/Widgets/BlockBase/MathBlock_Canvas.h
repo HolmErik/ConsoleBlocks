@@ -15,11 +15,15 @@ public:
 	~MathBlock_Canvas();
 	std::string getCodeLine();
 	void mouseReleaseEvent(QMouseEvent* e);
+	void UpdateBlock() override;
 
 private:
 	QComboBox* dropDown;
-	QPlainTextEdit* inParam0;
+	//QPlainTextEdit* inParam0;
 	QPlainTextEdit* inParam1;
 	QPlainTextEdit* inParam2;
 	Ui::MathBlock_Canvas ui;
+
+
+	QComboBox* varDropDown;
 };

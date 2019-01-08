@@ -7,7 +7,14 @@ VariableBlock_Canvas::VariableBlock_Canvas(QWidget *parent)
 
 	inputName = findChild<QPlainTextEdit*>("InputName");
 	inputValue = findChild<QPlainTextEdit*>("InputValue");
+	blocktype = blockType::VAR;
 }
+
+QString VariableBlock_Canvas::getInputName() const
+{
+	return inputName->toPlainText();
+}
+
 
 VariableBlock_Canvas::~VariableBlock_Canvas()
 {

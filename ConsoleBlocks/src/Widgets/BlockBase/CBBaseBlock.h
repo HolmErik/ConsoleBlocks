@@ -32,6 +32,15 @@ public:
 	void SetNextBlock(CBBaseBlock *block);
 	void SetPreviousBlock(CBBaseBlock *block);
 	virtual std::string getCodeLine();
+	virtual void UpdateBlock();
 
+
+
+	enum class blockType
+	{
+		UNDEFINED,
+		VAR
+	};
+
+	blockType blocktype = blockType::UNDEFINED;
 };
- 
