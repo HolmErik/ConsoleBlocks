@@ -68,7 +68,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>START HÄR BROR</string>
+         <string>START</string>
         </property>
         <property name="textFormat">
          <enum>Qt::AutoText</enum>
@@ -88,7 +88,7 @@
   <customwidget>
    <class>CBBaseBlock</class>
    <extends>QWidget</extends>
-   <header>CBBaseBlock.h</header>
+   <header>cbbaseblock.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
