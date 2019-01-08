@@ -15,11 +15,13 @@ public:
 	~PrintBlock_Canvas();
 	std::string getCodeLine() override;
 	void mouseReleaseEvent(QMouseEvent* e);
-	
+	void UpdateBlock();
 
 private:
 	Ui::PrintBlock_Canvas ui;
 	QTextEdit *inputValue;
 	QComboBox *dropDown;
+	QComboBox *varDropDown;
 	std::string GetInputString();
+	void UpdateField();
 };

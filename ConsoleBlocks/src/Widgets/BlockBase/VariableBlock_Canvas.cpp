@@ -23,8 +23,49 @@ VariableBlock_Canvas::~VariableBlock_Canvas()
 std::string VariableBlock_Canvas::getCodeLine()
 {
 	std::string code;
-	code += "var " + inputName->toPlainText().toStdString() +  " = " + inputValue->toPlainText().toStdString() + ";";
+	code += "var " + inputName->toPlainText().toStdString() + " = ";
+	std::string inString = inputValue->toPlainText().toStdString();
+	bool isNumber = std::all_of(inString.begin(), inString.end(), ::isdigit);
+
+	if (!isNumber)
+	{
+		//check if input is name of other var
+		if (CompareToEarlierStrings(inString))
+		{
+			code += inString;
+		}
+		else
+		{
+			code += "\"" + inString + "\"";
+		}
+	}
+	else
+	{
+		code += inString;
+	}
+
+	code += ";";
 	return code;
+}
+
+bool VariableBlock_Canvas::CompareToEarlierStrings(const std::string &a) const
+{
+	CBBaseBlock *tmp = this->GetPreviousBlock();
+	VariableBlock_Canvas *tmpVB = nullptr;
+	while (tmp != nullptr)
+	{
+		if (tmp->blocktype == blockType::VAR)
+		{
+			tmpVB = (VariableBlock_Canvas*)tmp;
+			if (a == tmpVB->getInputName().toStdString())
+			{
+				return true;
+			}
+		}
+
+		tmp = tmp->GetPreviousBlock();
+	}
+	return false;
 }
 
 void VariableBlock_Canvas::mouseReleaseEvent(QMouseEvent * e)

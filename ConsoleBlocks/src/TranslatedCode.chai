@@ -1,4 +1,6 @@
-var A = 3;
-var F = 2;
-A = A + F;
+var A = "B";
+var B = A;
+var Q = 0;
 CBPrint(to_string(A));
+CBPrint(to_string(B));
+CBPrint(to_string(Q));

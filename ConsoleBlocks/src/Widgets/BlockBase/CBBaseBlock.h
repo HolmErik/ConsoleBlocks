@@ -27,8 +27,8 @@ private:
 
 
 public:
-	CBBaseBlock * GetPreviousBlock();
-	CBBaseBlock* GetNextBlock();
+	CBBaseBlock * GetPreviousBlock() const;
+	CBBaseBlock* GetNextBlock() const;
 	void SetNextBlock(CBBaseBlock *block);
 	void SetPreviousBlock(CBBaseBlock *block);
 	virtual std::string getCodeLine();

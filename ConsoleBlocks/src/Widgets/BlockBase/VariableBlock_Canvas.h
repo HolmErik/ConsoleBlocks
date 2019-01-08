@@ -3,6 +3,7 @@
 #include <CBBaseBlock.h>
 #include "ui_VariableBlock_Canvas.h"
 #include "QtWidgets/qplaintextedit.h"
+
 #include <Canvas.h>
 
 class VariableBlock_Canvas : public CBBaseBlock
@@ -15,9 +16,9 @@ public:
 	std::string getCodeLine() override;
 	void mouseReleaseEvent(QMouseEvent* e);
 	QString getInputName() const;
-
 private:
 	QPlainTextEdit *inputName;
 	QPlainTextEdit *inputValue;
 	Ui::VariableBlock_Canvas ui;
+	bool CompareToEarlierStrings(const std::string &a)const;
 };

@@ -30,6 +30,7 @@ public:
     QLabel *label;
     QComboBox *DropDown;
     QTextEdit *TE;
+    QComboBox *VarDropDown;
 
     void setupUi(CBBaseBlock *PrintBlock_Canvas)
     {
@@ -53,21 +54,29 @@ public:
         horizontalLayout->setContentsMargins(8, 4, 8, 4);
         label = new QLabel(widget);
         label->setObjectName(QStringLiteral("label"));
-        label->setMaximumSize(QSize(100, 32));
+        label->setMaximumSize(QSize(51, 32));
 
         horizontalLayout->addWidget(label);
 
         DropDown = new QComboBox(widget);
         DropDown->setObjectName(QStringLiteral("DropDown"));
+        DropDown->setMaximumSize(QSize(66, 16777215));
         DropDown->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(DropDown);
 
         TE = new QTextEdit(widget);
         TE->setObjectName(QStringLiteral("TE"));
+        TE->setEnabled(true);
         TE->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(TE);
+
+        VarDropDown = new QComboBox(widget);
+        VarDropDown->setObjectName(QStringLiteral("VarDropDown"));
+        VarDropDown->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout->addWidget(VarDropDown);
 
 
         verticalLayout->addWidget(widget);

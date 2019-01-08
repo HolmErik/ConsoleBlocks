@@ -21,7 +21,7 @@ CBBaseBlock::~CBBaseBlock()
 {
 }
 
-CBBaseBlock* CBBaseBlock::GetNextBlock()
+CBBaseBlock* CBBaseBlock::GetNextBlock() const
 {
 	if(nextBlock != nullptr)
 		return nextBlock;
@@ -29,7 +29,7 @@ CBBaseBlock* CBBaseBlock::GetNextBlock()
 }
 
 
-CBBaseBlock* CBBaseBlock::GetPreviousBlock()
+CBBaseBlock* CBBaseBlock::GetPreviousBlock() const
 {
 	if(previousBlock)
 		return previousBlock;
