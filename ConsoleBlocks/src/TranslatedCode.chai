@@ -1,3 +1,0 @@
-var rumpa = 0;
-rumpa = 10 + 10;
-CBPrint(rumpa);

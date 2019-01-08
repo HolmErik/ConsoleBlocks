@@ -10,12 +10,13 @@ LoopBlock_Canvas::LoopBlock_Canvas(QWidget *parent)
 
 LoopBlock_Canvas::~LoopBlock_Canvas()
 {
+
 }
 
 std::string LoopBlock_Canvas::getCodeLine()
 {
 	std::string code;
-	code += "for(var i = 1; i <";
+	code += "for(var i = 0; i <";
 	code += inParam->toPlainText().toStdString();
 	code += "; ++i) {"; //chai syntax loop
 	return code;
