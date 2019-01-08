@@ -64,7 +64,7 @@ public:
     void retranslateUi(CBBaseBlock *IfBlock_Shelf)
     {
         IfBlock_Shelf->setWindowTitle(QApplication::translate("IfBlock_Shelf", "IfBlock_Shelf", nullptr));
-        label->setText(QApplication::translate("IfBlock_Shelf", "OMSATS!", nullptr));
+        label->setText(QApplication::translate("IfBlock_Shelf", "IF", nullptr));
     } // retranslateUi
 
 };

@@ -1,6 +1,0 @@
-var A = "B";
-var B = A;
-var Q = 0;
-CBPrint(to_string(A));
-CBPrint(to_string(B));
-CBPrint(to_string(Q));

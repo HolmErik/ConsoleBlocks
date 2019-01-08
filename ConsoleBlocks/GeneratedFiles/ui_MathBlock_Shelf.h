@@ -61,7 +61,7 @@ public:
     void retranslateUi(CBBaseBlock *MathBlock_Shelf)
     {
         MathBlock_Shelf->setWindowTitle(QApplication::translate("MathBlock_Shelf", "MathBlock_Shelf", nullptr));
-        label->setText(QApplication::translate("MathBlock_Shelf", "MATTE", nullptr));
+        label->setText(QApplication::translate("MathBlock_Shelf", "MATH", nullptr));
     } // retranslateUi
 
 };

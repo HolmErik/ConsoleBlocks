@@ -62,7 +62,7 @@ public:
     void retranslateUi(CBBaseBlock *VariableBlock_Shelf)
     {
         VariableBlock_Shelf->setWindowTitle(QApplication::translate("VariableBlock_Shelf", "VariableBlock_Shelf", nullptr));
-        label->setText(QApplication::translate("VariableBlock_Shelf", "VARIABEL", nullptr));
+        label->setText(QApplication::translate("VariableBlock_Shelf", "VARIABLE", nullptr));
     } // retranslateUi
 
 };

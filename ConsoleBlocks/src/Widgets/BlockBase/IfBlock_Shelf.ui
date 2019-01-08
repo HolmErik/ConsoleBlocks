@@ -62,7 +62,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>OMSATS!</string>
+         <string>IF</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

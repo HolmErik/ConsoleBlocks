@@ -62,7 +62,7 @@ public:
     void retranslateUi(CBBaseBlock *PrintBlock_Shelf)
     {
         PrintBlock_Shelf->setWindowTitle(QApplication::translate("PrintBlock_Shelf", "PrintBlock_Shelf", nullptr));
-        label->setText(QApplication::translate("PrintBlock_Shelf", "SKRIV UT:", nullptr));
+        label->setText(QApplication::translate("PrintBlock_Shelf", "PRINT", nullptr));
     } // retranslateUi
 
 };

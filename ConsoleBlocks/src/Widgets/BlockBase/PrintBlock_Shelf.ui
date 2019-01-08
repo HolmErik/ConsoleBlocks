@@ -53,7 +53,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>SKRIV UT:</string>
+         <string>PRINT</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

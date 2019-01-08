@@ -62,7 +62,7 @@ public:
     void retranslateUi(CBBaseBlock *EndBlock_Shelf)
     {
         EndBlock_Shelf->setWindowTitle(QApplication::translate("EndBlock_Shelf", "EndBlock_Shelf", nullptr));
-        label->setText(QApplication::translate("EndBlock_Shelf", "ST\303\204NG OM }", nullptr));
+        label->setText(QApplication::translate("EndBlock_Shelf", "CLOSE STATEMENT", nullptr));
     } // retranslateUi
 
 };

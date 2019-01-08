@@ -53,7 +53,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>VARIABEL</string>
+         <string>VARIABLE</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

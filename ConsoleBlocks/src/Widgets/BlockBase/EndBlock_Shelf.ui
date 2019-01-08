@@ -50,7 +50,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>STÄNG OM }</string>
+         <string>CLOSE STATEMENT</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

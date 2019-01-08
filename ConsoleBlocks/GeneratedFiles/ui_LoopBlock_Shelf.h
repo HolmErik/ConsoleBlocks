@@ -62,7 +62,7 @@ public:
     void retranslateUi(CBBaseBlock *LoopBlock_Shelf)
     {
         LoopBlock_Shelf->setWindowTitle(QApplication::translate("LoopBlock_Shelf", "LoopBlock_Shelf", nullptr));
-        label->setText(QApplication::translate("LoopBlock_Shelf", "LOOPHELVETE", nullptr));
+        label->setText(QApplication::translate("LoopBlock_Shelf", "LOOP", nullptr));
     } // retranslateUi
 
 };
