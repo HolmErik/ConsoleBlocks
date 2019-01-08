@@ -14,7 +14,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
-#include "CBBaseBlock.h"
+#include "cbbaseblock.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -66,7 +66,7 @@ public:
     void retranslateUi(CBBaseBlock *CBStartBlock)
     {
         CBStartBlock->setWindowTitle(QApplication::translate("CBStartBlock", "CBStartBlock", nullptr));
-        label->setText(QApplication::translate("CBStartBlock", "START H\303\204R BROR", nullptr));
+        label->setText(QApplication::translate("CBStartBlock", "START", nullptr));
     } // retranslateUi
 
 };

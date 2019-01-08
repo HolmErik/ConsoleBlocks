@@ -97,7 +97,7 @@ public:
     void retranslateUi(CBBaseBlock *MathBlock_Canvas)
     {
         MathBlock_Canvas->setWindowTitle(QApplication::translate("MathBlock_Canvas", "MathBlock_Canvas", nullptr));
-        label->setText(QApplication::translate("MathBlock_Canvas", "\303\204r Lika Med", nullptr));
+        label->setText(QApplication::translate("MathBlock_Canvas", "EQUALS", nullptr));
     } // retranslateUi
 
 };

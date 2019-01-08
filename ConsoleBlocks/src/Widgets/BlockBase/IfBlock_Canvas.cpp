@@ -9,10 +9,10 @@ IfBlock_Canvas::IfBlock_Canvas(QWidget *parent)
 	param1 = findChild<QPlainTextEdit*>("Param1");
 
 	QStringList operators;
-	operators.push_back(tr("SAME AS"));
-	operators.push_back(tr("BIGGER THAN"));
-	operators.push_back(tr("SMALLER THAN"));
-	operators.push_back(tr("NOT SAME AS"));
+	operators.push_back(tr("equals"));
+	operators.push_back(tr("bigger than"));
+	operators.push_back(tr("smaller than"));
+	operators.push_back(tr("not same as"));
 	dropDown->insertItems(0, operators);
 
 }

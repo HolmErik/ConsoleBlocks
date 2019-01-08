@@ -94,8 +94,8 @@ public:
     void retranslateUi(CBBaseBlock *VariableBlock_Canvas)
     {
         VariableBlock_Canvas->setWindowTitle(QApplication::translate("VariableBlock_Canvas", "VariableBlock_Canvas", nullptr));
-        label->setText(QApplication::translate("VariableBlock_Canvas", "DEFINERA:", nullptr));
-        label_2->setText(QApplication::translate("VariableBlock_Canvas", "SOM", nullptr));
+        label->setText(QApplication::translate("VariableBlock_Canvas", "DEFINE ", nullptr));
+        label_2->setText(QApplication::translate("VariableBlock_Canvas", "AS", nullptr));
     } // retranslateUi
 
 };

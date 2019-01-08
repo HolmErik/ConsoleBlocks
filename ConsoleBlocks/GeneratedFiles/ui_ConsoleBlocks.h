@@ -53,6 +53,7 @@ public:
     QWidget *widget_8;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
     Canvas *canvas;
     QVBoxLayout *verticalLayout_4;
     ConsoleWidget *CW;
@@ -163,8 +164,15 @@ public:
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(widget_8);
         pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setStyleSheet(QStringLiteral("background-color: rgb(68, 255, 16);"));
 
         horizontalLayout_3->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(widget_8);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setStyleSheet(QStringLiteral("background-color: rgb(255, 0, 4);"));
+
+        horizontalLayout_3->addWidget(pushButton_2);
 
 
         verticalLayout_2->addWidget(widget_8);
@@ -212,7 +220,8 @@ public:
     {
         ConsoleBlocksClass->setWindowTitle(QApplication::translate("ConsoleBlocksClass", "ConsoleBlocks", nullptr));
         label->setText(QApplication::translate("ConsoleBlocksClass", "BLOCK SHELF", nullptr));
-        pushButton->setText(QApplication::translate("ConsoleBlocksClass", "RUN!", nullptr));
+        pushButton->setText(QApplication::translate("ConsoleBlocksClass", "RUN", nullptr));
+        pushButton_2->setText(QApplication::translate("ConsoleBlocksClass", "CLEAR", nullptr));
     } // retranslateUi
 
 };

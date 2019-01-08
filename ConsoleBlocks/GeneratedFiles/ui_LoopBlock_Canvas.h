@@ -80,8 +80,8 @@ public:
     void retranslateUi(CBBaseBlock *LoopBlock_Canvas)
     {
         LoopBlock_Canvas->setWindowTitle(QApplication::translate("LoopBlock_Canvas", "LoopBlock_Canvas", nullptr));
-        label->setText(QApplication::translate("LoopBlock_Canvas", "G\303\266r N\303\244sta", nullptr));
-        label_2->setText(QApplication::translate("LoopBlock_Canvas", "Antal G\303\245nger:", nullptr));
+        label->setText(QApplication::translate("LoopBlock_Canvas", "DO NEXT", nullptr));
+        label_2->setText(QApplication::translate("LoopBlock_Canvas", "TIMES", nullptr));
     } // retranslateUi
 
 };

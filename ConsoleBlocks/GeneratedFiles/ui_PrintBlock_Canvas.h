@@ -90,7 +90,7 @@ public:
     void retranslateUi(CBBaseBlock *PrintBlock_Canvas)
     {
         PrintBlock_Canvas->setWindowTitle(QApplication::translate("PrintBlock_Canvas", "PrintBlock_Canvas", nullptr));
-        label->setText(QApplication::translate("PrintBlock_Canvas", "SKRIV UT:", nullptr));
+        label->setText(QApplication::translate("PrintBlock_Canvas", "PRINT      ", nullptr));
     } // retranslateUi
 
 };

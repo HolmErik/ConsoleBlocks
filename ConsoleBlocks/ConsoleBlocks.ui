@@ -161,8 +161,21 @@
              </property>
              <item>
               <widget class="QPushButton" name="pushButton">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(68, 255, 16);</string>
+               </property>
                <property name="text">
-                <string>RUN!</string>
+                <string>RUN</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 0, 4);</string>
+               </property>
+               <property name="text">
+                <string>CLEAR</string>
                </property>
               </widget>
              </item>

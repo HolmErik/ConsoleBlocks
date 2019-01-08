@@ -51,7 +51,7 @@ public:
         widget->setMaximumSize(QSize(400, 32));
         widget->setStyleSheet(QStringLiteral("background-color: rgb(181, 89, 255);"));
         horizontalLayout_2 = new QHBoxLayout(widget);
-        horizontalLayout_2->setSpacing(20);
+        horizontalLayout_2->setSpacing(10);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(8, 4, 8, 4);
@@ -71,6 +71,7 @@ public:
 
         DropDown = new QComboBox(widget);
         DropDown->setObjectName(QStringLiteral("DropDown"));
+        DropDown->setMinimumSize(QSize(100, 0));
         DropDown->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout_2->addWidget(DropDown);
@@ -101,8 +102,8 @@ public:
     void retranslateUi(CBBaseBlock *IfBlock_Canvas)
     {
         IfBlock_Canvas->setWindowTitle(QApplication::translate("IfBlock_Canvas", "IfBlock_Canvas", nullptr));
-        IF->setText(QApplication::translate("IfBlock_Canvas", "OM:", nullptr));
-        DO->setText(QApplication::translate("IfBlock_Canvas", "G\303\226R:", nullptr));
+        IF->setText(QApplication::translate("IfBlock_Canvas", "IF", nullptr));
+        DO->setText(QApplication::translate("IfBlock_Canvas", "DO FOLLOWING", nullptr));
     } // retranslateUi
 
 };

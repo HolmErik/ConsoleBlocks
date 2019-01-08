@@ -63,7 +63,7 @@ public:
     void retranslateUi(CBBaseBlock *EndBlock_Canvas)
     {
         EndBlock_Canvas->setWindowTitle(QApplication::translate("EndBlock_Canvas", "EndBlock_Canvas", nullptr));
-        label->setText(QApplication::translate("EndBlock_Canvas", "ST\303\204NG OM }", nullptr));
+        label->setText(QApplication::translate("EndBlock_Canvas", "CLOSE STATEMENT", nullptr));
     } // retranslateUi
 
 };
