@@ -214,6 +214,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\TranslatedCode.chai" />
+    <None Include="TranslatedCode.chai" />
   </ItemGroup>
 </Project>

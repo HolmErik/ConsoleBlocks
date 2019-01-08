@@ -2,7 +2,9 @@
 .vs/
 bin/
 bin-int/
+ConsoleBlocks/GeneratedFiles/
 
 #files
 *.user
-*.chai
+**/*.chai
+ConsoleBlocks/src/TranslatedCode.chai

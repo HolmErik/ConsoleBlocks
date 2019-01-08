@@ -8,11 +8,6 @@ ConsoleBlocks::ConsoleBlocks(QWidget *parent)
 	ui.setupUi(this);
 	canvas = findChild<Canvas*>("canvas");
 	Canvas::startBlock = findChild<CBStartBlock*>("StartBlock");
-
-	
-	//scriptExecuter = new chaiscript::ChaiScript();
-	//ScriptFunctions::AddFunctions(scriptExecuter);
-	//scriptExecuter->eval_file(translator.GetScript());
 }
 
 void ConsoleBlocks::on_pushButton_clicked()

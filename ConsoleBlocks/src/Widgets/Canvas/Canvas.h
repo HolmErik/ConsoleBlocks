@@ -3,7 +3,7 @@
 #include <QtWidgets/qwidget.h>
 #include <ConsoleWidget/ConsoleWidget.h>
 #include <vector>
-#include "../ui_Canvas.h"
+#include "ui_Canvas.h"
 #include <BlockBase/CBBaseBlock.h>
 #include <BlockBase/CBStartBlock.h>
 

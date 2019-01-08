@@ -1,7 +1,0 @@
-var A = 0;
-for(var i = 0; i <5; ++i) {
-for(var i = 0; i <5; ++i) {
-A = A + 1;
-}
-}
-CBPrint(to_string(A));
