@@ -62,7 +62,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>DEFINERA:</string>
+         <string>DEFINE </string>
         </property>
         <property name="textFormat">
          <enum>Qt::PlainText</enum>
@@ -94,7 +94,7 @@
       <item>
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>SOM</string>
+         <string>AS</string>
         </property>
         <property name="textFormat">
          <enum>Qt::PlainText</enum>

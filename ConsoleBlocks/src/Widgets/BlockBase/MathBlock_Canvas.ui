@@ -54,7 +54,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Är Lika Med</string>
+         <string>EQUALS</string>
         </property>
        </widget>
       </item>

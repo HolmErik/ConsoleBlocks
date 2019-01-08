@@ -83,7 +83,7 @@
          <string notr="true">background-color: rgb(181, 89, 255);</string>
         </property>
         <property name="text">
-         <string>OM:</string>
+         <string>IF</string>
         </property>
        </widget>
       </item>
@@ -126,7 +126,7 @@
          <string notr="true">background-color: rgb(181, 89, 255);</string>
         </property>
         <property name="text">
-         <string>GÖR:</string>
+         <string>DO FOLLOWING</string>
         </property>
        </widget>
       </item>

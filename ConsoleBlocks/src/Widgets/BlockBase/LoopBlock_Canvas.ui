@@ -47,7 +47,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Gör Nästa</string>
+         <string>DO NEXT</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -76,7 +76,7 @@
       <item>
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>Antal Gånger:</string>
+         <string>TIMES</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

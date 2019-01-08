@@ -13,10 +13,10 @@ MathBlock_Canvas::MathBlock_Canvas(QWidget *parent)
 
 
 	QStringList operators;
-	operators.push_back(tr("plus"));
-	operators.push_back(tr("minus"));
-	operators.push_back(tr("gånger med"));
-	operators.push_back(tr("delat med"));
+	operators.push_back(tr("ADD"));
+	operators.push_back(tr("SUBTRACT"));
+	operators.push_back(tr("MULTIPLIED WITH"));
+	operators.push_back(tr("DIVIDED WITH"));
 	dropDown->insertItems(0, operators);
 }
 

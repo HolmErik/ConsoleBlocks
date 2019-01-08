@@ -8,13 +8,12 @@ IfBlock_Canvas::IfBlock_Canvas(QWidget *parent)
 	param0 = findChild<QPlainTextEdit*>("Param0");
 	param1 = findChild<QPlainTextEdit*>("Param1");
 
-	int i = 0;
 	QStringList operators;
-	operators.push_back(tr("Är lika med"));
-	operators.push_back(tr("Är större än"));
-	operators.push_back(tr("Är mindre än"));
-	operators.push_back(tr("Inte är samma"));
-	dropDown->insertItems(i++, operators);
+	operators.push_back(tr("SAME AS"));
+	operators.push_back(tr("BIGGER THAN"));
+	operators.push_back(tr("SMALLER THAN"));
+	operators.push_back(tr("NOT SAME AS"));
+	dropDown->insertItems(0, operators);
 
 }
 

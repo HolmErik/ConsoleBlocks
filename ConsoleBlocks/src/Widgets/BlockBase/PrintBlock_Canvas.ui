@@ -68,7 +68,7 @@
          </size>
         </property>
         <property name="text">
-         <string>SKRIV UT:</string>
+         <string>PRINT      </string>
         </property>
        </widget>
       </item>
